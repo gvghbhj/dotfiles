@@ -21,10 +21,12 @@ if status is-interactive
     abbr --add gps git push origin
     abbr --add gpu git pull -p origin main
     abbr --add gc git commit -m
-
+    
+    # zoxide
     zoxide init fish | source
     alias cd='z'
-
+    
+    # bindings
     bind \eF fg
 end
 
