@@ -1,1 +1,1 @@
-My hyprland dotfiles, on arch linux.
+My Hyprland dotfiles, on Arch Linux, with neovim, fish, kitty and others.
