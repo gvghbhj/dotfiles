@@ -16,3 +16,5 @@ My Hyprland dotfiles, on Arch Linux, with neovim, fish, kitty and others.
 - PDF Viewer: [Zathura](https://pwmt.org/projects/zathura/)
 - Lockscreen: [Hyprlock](https://github.com/hyprwm/hyprlock)
 - Fonts: [Iosevka nerd font](https://www.nerdfonts.com/#home)
+
+![alt text](https://github.com/gvghbhj/dotfiles/tree/main/.github/screenshots/screenshot.jpg)
