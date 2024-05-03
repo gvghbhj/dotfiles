@@ -1,0 +1,13 @@
+configuration {
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{name}";
+  window-format:              "{w}{c}";
+  modi: "window,run,drun,filebrowser";
+  
+  // enabling the icons
+  // show-icons: true;
+  // icon-theme: "Numix-Circle";
+}
+
+@theme "/home/gn/.config/rofi/themes/colors-normal.rasi"

@@ -1,0 +1,13 @@
+configuration {
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{name}";
+  font: "DaddyTimeMono Nerd Font Mono 10";
+  modi: "window,run,drun,calc";
+  
+  // enabling the icons
+  show-icons: true;
+  icon-theme: "Papirus";
+}
+
+@theme "/home/gn/.local/share/rofi/themes/catppuccin-mocha.rasi"
