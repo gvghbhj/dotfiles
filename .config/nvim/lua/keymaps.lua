@@ -36,7 +36,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- for spelling, on or of, and for oil
 --
-
+-- better j and k movement
 vim.keymap.set({ 'n', 'x' }, 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set({ 'n', 'x' }, '<Down>', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set({ 'n', 'x' }, 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -103,6 +103,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- A function that zooms in to current buffer, and opens twilight. Useful for writing documents, where stuff like lualine and barbar can be distracting.
 vim.keymap.set('n', '<A-z>', function()
   -- Get initial height then see if height afer .zoom is bigger, to determine if we zooming in or out.
   local initial_height = vim.api.nvim_win_get_height(0)
@@ -130,6 +131,7 @@ vim.keymap.set('n', ';', ':', { desc = 'Go to command mode' })
 vim.keymap.set('v', '<', '<gv', { desc = 'Better indentation' })
 vim.keymap.set('v', '>', '>gv', { desc = 'better indentation' })
 
+-- set of functions that increase cmdline height when recording a macro.
 vim.api.nvim_create_autocmd('RecordingEnter', {
   pattern = '*',
   callback = function()

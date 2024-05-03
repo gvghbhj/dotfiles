@@ -4,6 +4,8 @@
 -- you do for a plugin at the top level, you can do for a dependency.
 --
 -- Use the `dependencies` key to specify the dependencies of a particular plugin
+--
+-- A function that sets the theme to be ivy
 local function theme_wrapper(telescope_command)
   return function()
     telescope_command(require('telescope.themes').get_ivy())
