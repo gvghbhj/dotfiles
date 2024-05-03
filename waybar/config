@@ -1,0 +1,16 @@
+{
+  "include": "~/.config/waybar/modules",
+  "layer": "bottom",
+  "exclusive": true,
+  "height": 20,
+  "passthrough": false,
+  "position": "bottom",
+  "fixed-center": true,
+  "spacing": 5,
+  "gtk-layer-shell": true,
+  "margin": 0,
+
+  "modules-left": ["battery", "custom/separator", "cpu", "custom/separator"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["hyprland/submap", "custom/separator", "clock"],
+}
