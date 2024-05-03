@@ -1,0 +1,21 @@
+#!/bin/fish
+
+while true
+    # Get the charging status
+    set charging_status (upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state" | awk '{print $2}')
+
+    # Get the current battery percentage
+    set battery_percentage (upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "percentage" | awk '{print $2}' | tr -d '%')
+
+    # Check if the battery percentage is below 10%
+    if test "$charging_status" = "discharging" && test $battery_percentage -le 10
+      notify-send "󰂎 Low Battery" "Battery is below 10%"
+    # Check if the battery is charging and the percentage is above or equal to 95%
+    else if test "$charging_status" = "charging" && test $battery_percentage -ge 95
+      notify-send "󰂃 High Battery" "Battery is above 90%"
+    end
+
+    # Sleep for 10 seconds before checking again
+    sleep 60
+end
+

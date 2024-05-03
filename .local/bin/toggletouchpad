@@ -1,0 +1,21 @@
+#!/bin/fish
+
+set HYPRLAND_DEVICE 'asue140a:00-04f3:3134-touchpad'
+
+function enable_touchpad
+  notify-send -u normal "Enabling Touchpad"
+  hyprctl keyword "device:$HYPRLAND_DEVICE:enabled" true
+end
+
+function disable_touchpad
+  notify-send -u normal "Disabling Touchpad"
+  hyprctl keyword "device:$HYPRLAND_DEVICE:enabled" false
+end
+
+
+switch $argv[1]
+case enable 
+  enable_touchpad 
+case disable 
+  disable_touchpad
+end

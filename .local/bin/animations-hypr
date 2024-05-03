@@ -1,0 +1,13 @@
+#!/bin/fish
+#
+function hypr_animations_change 
+  if test (hyprctl getoption animations:enabled | awk 'NR==1{print $2}') -eq 0 
+    hyprctl keyword animations:enabled yes
+    notify-send 'Animations -> On'
+  else
+    hyprctl keyword animations:enabled no
+    notify-send 'Animations -> Off'
+  end
+end
+
+hypr_animations_change
