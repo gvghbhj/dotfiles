@@ -18,6 +18,9 @@ if status is-interactive
     abbr --add par sudo pacman -Rcs
     abbr --add pac sudo pacman 
     abbr --add pasu sudo pacman -Syu
+    abbr --add gps git push origin
+    abbr --add gpu git pull -p origin main
+    abbr --add gc git commit -m
 
     zoxide init fish | source
     alias cd='z'
