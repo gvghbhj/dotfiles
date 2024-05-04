@@ -19,7 +19,7 @@ if status is-interactive
     abbr --add pac sudo pacman 
     abbr --add pasu sudo pacman -Syu
     abbr --add gp git push origin
-    abbr --add gl git pull -p origin main
+    abbr --add go git pull -p origin main
     abbr --add gc git commit -m
     
     # zoxide
