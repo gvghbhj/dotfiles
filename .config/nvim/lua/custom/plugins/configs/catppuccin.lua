@@ -44,6 +44,10 @@ return {
         String = { style = { 'italic' } },
         Function = { style = { 'italic' } },
         Conditional = { style = { 'italic' } },
+        BufferCurrent = { bg = colors.base },
+        BufferCurrentIndex = { bg = colors.base },
+        BufferCurrentMod = { bg = colors.base },
+        BufferCurrentSign = { bg = colors.base },
       }
     end,
   },
