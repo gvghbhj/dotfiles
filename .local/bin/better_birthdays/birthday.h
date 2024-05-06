@@ -1,10 +1,13 @@
 #ifndef BIRTHDAY_H
 #define BIRTHDAY_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
 #include <stdbool.h>
+#include <signal.h>
+#include <readline/readline.h>
 
 #define MAX_STR_SIZE 32
 #define INIT_SIZE 10

@@ -1,7 +1,6 @@
 #include "birthday.h"
 #include "f_readline.h"
 #include "my_malloc.h"
-#include "readline.h"
 
 struct birthday **birthdays = NULL;
 int num_args = 0;         // num arguments in the birthdays array
@@ -16,7 +15,8 @@ int main(int argc, char *argv[]) {
 
   fptr_r = fopen(file_location, "r");
 
-  if (fptr_r == NULL) {
+  if (fptr_r == NULL)
+  {
     printf("Database file can not be opened, make sure the file exist and is "
            "properly represented by $birthdays_file\n");
   }
@@ -180,7 +180,8 @@ void print_next(FILE *fptr_r) {
   free(birthdays);
 }
 
-void print_help(void) {
+void print_help(void)
+{
   printf("./birthday [operation] [flags] [flag args]\n\n");
   printf("Operations: a/add, e/edit, d/delete, l/list\n\n");
   printf("Flags: \n-h [prints help information]\n\n");
@@ -194,25 +195,19 @@ void print_help(void) {
 void add_to_array(const char **file_location) {
   printf("Enter nothing (an empty line) to exit\n\n");
 
-  printf("Enter Name: ");
-  char name[MAX_STR_SIZE + 1]; // temporary name buffer
-  read_line(name, MAX_STR_SIZE);
+  birthdays[num_args]->name = readline("Enter name: ");
 
-  while (name[0] !=
-         '\0') // checks if an empty line (just enter key) was entered by user
+  while (birthdays[num_args]->name[0] != '\0') // checks if an empty line (just enter key) was entered by user
   {
-    if (num_args == max_args) {
+    if (num_args == max_args)
+    {
       max_args *= 2;
       birthdays = realloc(birthdays, max_args * sizeof(struct birthday *));
-      if (birthdays == NULL) {
+      if (birthdays == NULL)
+      {
         printf("ERROR: Memory error\n");
       }
     }
-
-    strcpy(birthdays[num_args]->name, name);
-    birthdays[num_args]->name[strlen(name)] =
-        '\0'; // to ensure no errors, as strcpy does not always include the null
-              // terminator
 
     printf("Enter Day: ");
     scanf("%d", &(birthdays[num_args]->day));
@@ -224,11 +219,9 @@ void add_to_array(const char **file_location) {
 
     getchar();
     printf("\n");
-    printf("Enter Name: ");
-    read_line(name, MAX_STR_SIZE);
+    birthdays[num_args]->name = readline("Enter name: ");
 
     birthdays[num_args] = my_malloc(sizeof(struct birthday));
-    birthdays[num_args]->name = my_malloc(sizeof(char) * (MAX_STR_SIZE + 1));
   }
 
   printf("\n");
@@ -281,13 +274,8 @@ void edit_array(const char **file_location) {
     printf("\n");
 
     getchar();
-    printf("Enter Name (enter nothing/empty line to leave name unchanged) : ");
-    read_line(name, MAX_STR_SIZE);
 
-    if (name[0] != '\0') {
-      strcpy(birthdays[index_edit - 1]->name, name);
-      birthdays[index_edit - 1]->name[strlen(name)] = '\0';
-    }
+    birthdays[index_edit]->name = readline("Enter Name (enter nothing/empty line to leave name unchanged) : ");
 
     printf("Enter Day: ");
     scanf("%d", &(birthdays[index_edit - 1]->day));
