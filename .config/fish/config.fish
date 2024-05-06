@@ -27,8 +27,8 @@ if status is-interactive
     alias cd='z'
     
     # bindings
-    bind \eF fg
-    bind \eZ 'zi'
+    bind \eF 'fg; commandline -f repaint'
+    bind \eZ 'zi; commandline -f repaint'
 end
 
 
