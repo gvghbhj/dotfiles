@@ -28,6 +28,7 @@ if status is-interactive
     
     # bindings
     bind \eF fg
+    bind \eZ 'zi'
 end
 
 
