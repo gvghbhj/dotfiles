@@ -29,6 +29,7 @@ if status is-interactive
     # bindings
     bind \eF 'fg; commandline -f repaint'
     bind \eZ 'zi; commandline -f repaint'
+    bind \en 'cliphist list | fzf --preview="" --height=80% | cliphist decode | wl-copy; commandline -f repaint'
 end
 
 
