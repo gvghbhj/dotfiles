@@ -7,7 +7,10 @@ if status is-interactive
     # abbreviations: 
     abbr --add n nvim
     abbr --add g gcc -W -Wextra -std=gnu11 -ggdb3 -o 
-    abbr --add m mullvad 
+    abbr --add ms mullvad status
+    abbr --add mc mullvad connect
+    abbr --add md mullvad disconnect
+    abbr --add mr mullvad relay
     abbr --add v valgrind --tool=memcheck --leak-check=full --track-origins=yes -s 
     abbr --add se sudoedit
     abbr --add fs fastfetch
