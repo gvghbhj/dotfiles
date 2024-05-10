@@ -21,9 +21,9 @@ if status is-interactive
     abbr --add par sudo pacman -Rcs
     abbr --add pac sudo pacman 
     abbr --add pasu sudo pacman -Syu
-    abbr --add gp git push origin
-    abbr --add go git pull -p origin main
-    abbr --add gc git commit -m
+    abbr --add push git push origin
+    abbr --add pull git pull origin 
+    abbr --add cm git commit -a -m
     
     # zoxide
     zoxide init fish | source
