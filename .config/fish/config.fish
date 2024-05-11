@@ -35,7 +35,7 @@ if status is-interactive
     abbr --add push git push origin
     abbr --add pull git pull origin 
     abbr --add cm git commit -a -m
-    abbr --add st git status
+    abbr --add st git status --short -uno
     
 
 
