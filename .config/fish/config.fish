@@ -10,6 +10,7 @@ if status is-interactive
     abbr --add za zathura --fork
     abbr --add ki killall
     abbr --add se sudoedit
+    abbr --add f fzf
 
     # C PROGRAMMING:
     #
