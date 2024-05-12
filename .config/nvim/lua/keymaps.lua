@@ -154,4 +154,6 @@ vim.api.nvim_create_autocmd('RecordingLeave', {
     )
   end,
 })
+
+vim.keymap.set('n', '<leader>j', "<CMD>:%!jq '.'<CR>", { desc = 'Formates json file with jq' })
 -- vim: ts=2 sts=2 sw=2 et
