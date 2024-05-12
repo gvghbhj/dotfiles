@@ -53,7 +53,7 @@ tide_left_prompt_frame_enabled true
 tide_left_prompt_items pwd git newline
 tide_left_prompt_prefix ''
 tide_left_prompt_separator_diff_color 
-tide_left_prompt_separator_same_color 󰘧
+tide_left_prompt_separator_same_color 
 tide_left_prompt_suffix 
 tide_nix_shell_bg_color 7EBAE4
 tide_nix_shell_color 000000

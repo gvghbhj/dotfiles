@@ -1,5 +1,5 @@
 tide_aws_icon  # Actual aws glyph is harder to see
-tide_character_icon ' 󰘧'
+tide_character_icon ❯
 tide_character_vi_icon_default ❮
 tide_character_vi_icon_replace ▶
 tide_character_vi_icon_visual V
@@ -22,7 +22,7 @@ tide_php_icon 
 tide_private_mode_icon 󰗹
 tide_prompt_icon_connection ' '
 tide_pulumi_icon 
-tide_pwd_icon 
+tide_pwd_icon
 tide_pwd_icon_home
 tide_pwd_icon_unwritable 
 tide_python_icon 󰌠

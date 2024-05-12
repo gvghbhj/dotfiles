@@ -18,7 +18,7 @@ function rainbow_prompt_separators
 
     _tide_option 4 Round
     set -g fake_tide_left_prompt_separator_diff_color ''
-    set -g fake_tide_right_prompt_separator_diff_color ' '
+    set -g fake_tide_right_prompt_separator_diff_color ''
     _tide_display_prompt
 
     _tide_menu (status function)
@@ -34,7 +34,7 @@ function rainbow_prompt_separators
             set -g fake_tide_right_prompt_separator_diff_color ''
         case Round
             set -g fake_tide_left_prompt_separator_diff_color ''
-            set -g fake_tide_right_prompt_separator_diff_color ' '
+            set -g fake_tide_right_prompt_separator_diff_color ''
     end
     _next_choice powerline/powerline_prompt_heads
 end
