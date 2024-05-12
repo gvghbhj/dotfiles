@@ -66,7 +66,7 @@ vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'move focus to the buffer up' })
 
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'move window focus to the buffer on the right' })
 
-vim.keymap.set('n', '<C-x>', '<C-w>x', { desc = 'swap with the next buffer in split mode' })
+vim.keymap.set('n', '<A-s>', '<C-w>x', { desc = 'swap with the next buffer in split mode' })
 
 vim.keymap.set('n', '<A-Right>', '<cmd>vertical resize +5<CR>', { desc = 'Increase size of vertical buffer by 5' })
 
