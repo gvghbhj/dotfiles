@@ -52,7 +52,7 @@ vim.keymap.set('n', '<leader>x', '<cmd>BufferClose<CR>', { desc = 'close buffer'
 
 vim.keymap.set('n', '<S-tab>', '<cmd>BufferPrevious<CR>', { desc = 'previous buffer' })
 
-vim.keymap.set('n', '<leader>d', '<cmd>Alpha<CR>', { desc = 'Alpha dashboard' })
+vim.keymap.set('n', '<leader>dd', '<cmd>Alpha<CR>', { desc = 'Alpha dashboard' })
 
 vim.keymap.set('n', '<A-.>', '<cmd>BufferMoveNext<CR>', { desc = 'move buffer to the next position' })
 
