@@ -31,7 +31,22 @@ return {
       -- statusline.section_location = function()
       -- return '%2l:%-2v'
       -- end
-      require('mini.files').setup { windows = { preview = true } }
+      require('mini.files').setup {
+        windows = { preview = true },
+        mappings = {
+          close = 'q',
+          go_in = '<CR>',
+          go_in_plus = 'L',
+          go_out = '-',
+          go_out_plus = 'H',
+          reset = 'u',
+          reveal_cwd = '@',
+          show_help = 'g?',
+          synchronize = '=',
+          trim_left = '<',
+          trim_right = '>',
+        },
+      }
 
       require('mini.comment').setup {
         options = { ignore_blank_line = true },
