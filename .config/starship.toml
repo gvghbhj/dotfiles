@@ -18,3 +18,6 @@ disabled = false
 
 [git_status]
 disabled = true
+
+[cmd_duration] 
+min_time = 5000
