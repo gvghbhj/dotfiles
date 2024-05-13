@@ -17,7 +17,6 @@ SETUVAR _fisher_patrickf1_2F_fzf_2E_fish_files:\x7e/\x2econfig/fish/functions/_f
 SETUVAR _fisher_plugins:patrickf1/fzf\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR _tide_left_items:\x1d
-SETUVAR _tide_prompt_1595:\x1d
 SETUVAR _tide_right_items:\x1d
 SETUVAR --export birthdays_file:/home/gn/\x2econfig/birthdays/birthdaysdb
 SETUVAR contacts_file:/home/gn/\x2econfig/contacts/contact_file
