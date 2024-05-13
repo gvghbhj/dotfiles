@@ -44,7 +44,6 @@ iio-sensor-proxy
 intel-ucode
 jq
 kitty
-kwayland-integration
 layer-shell-qt
 libisoburn
 libwnck3
