@@ -32,3 +32,6 @@ format = ' [$symbol$number]($style) '
 
 [battery]
 format = ' [$symbol$percentage]($style) '
+
+[python]
+symbol ='󰌠 '
