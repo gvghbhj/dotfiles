@@ -11,6 +11,7 @@ error_symbol = '[ 󰘧](bold red)'
 
 [directory]
 format = '[ $path]($style)[$read_only]($read_only_style) '
+read_only = '  '
 # Disable the package module, hiding it from the prompt completely
 
 [git_metrics]
@@ -25,3 +26,6 @@ min_time = 5000
 [sudo]
 disabled = false
 symbol = '  '
+
+[jobs]
+format = ' [$symbol$number]($style) '
