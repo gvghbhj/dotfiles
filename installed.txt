@@ -55,7 +55,6 @@ man-pages
 modemmanager-qt5
 mpv
 mullvad-vpn-cli
-networkmanager-qt5
 oxygen-sounds
 pamixer
 paru
