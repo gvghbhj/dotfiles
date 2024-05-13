@@ -1,5 +1,5 @@
 -- [[ Setting options ]]
--- See `:help vim.opt`
+-- See `:help vim.opt`opt
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
@@ -76,4 +76,4 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 vim.opt.title = true
-vim.opt.titlestring = 'nvim: %{expand("%:p")}'
+vim.opt.titlestring = 'nvim: %{expand("%:f")}'
