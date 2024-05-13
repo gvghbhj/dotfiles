@@ -50,7 +50,7 @@ return {
 
       require('mini.comment').setup {
         options = { ignore_blank_line = true },
-        mappings = { comment = '<leader>c', comment_line = '<leader>cc', comment_visual = '<leader>c', textobject = '<leader>c' },
+        mappings = { comment = '<leader>c', comment_line = '<leader>l', comment_visual = '<leader>c', textobject = '<leader>c' },
       }
 
       require('mini.pairs').setup { modes = { comamnd = true } }
