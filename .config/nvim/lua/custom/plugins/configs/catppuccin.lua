@@ -35,9 +35,11 @@ return {
       cmp = true,
       which_key = true,
       markdown = true,
+      bufferline = false,
     },
     custom_highlights = function(colors)
       return {
+        TabLineSel = { bg = colors.blue },
         WinSeparator = { bg = colors.blue },
         TelescopePromptPrefix = { fg = colors.blue },
         TelescopeSelectionCaret = { fg = colors.blue },

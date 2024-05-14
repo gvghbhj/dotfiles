@@ -46,17 +46,7 @@ vim.keymap.set('n', '<leader>sp', '<cmd>set spell!<CR>', { desc = 'toggle spell 
 
 vim.keymap.set('n', '-', '<cmd>lua MiniFiles.open()<CR>', { desc = 'opens mini.files' })
 
-vim.keymap.set('n', '<Tab>', '<cmd>BufferNext<CR>', { desc = 'next buffer' })
-
-vim.keymap.set('n', '<leader>x', '<cmd>BufferClose<CR>', { desc = 'close buffer' })
-
-vim.keymap.set('n', '<S-tab>', '<cmd>BufferPrevious<CR>', { desc = 'previous buffer' })
-
 vim.keymap.set('n', '<leader>dd', '<cmd>Alpha<CR>', { desc = 'Alpha dashboard' })
-
-vim.keymap.set('n', '<A-.>', '<cmd>BufferMoveNext<CR>', { desc = 'move buffer to the next position' })
-
-vim.keymap.set('n', '<A-,>', '<cmd>BufferMovePrevious<CR>', { desc = 'move buffer to previous position' })
 
 vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'move focus to the buffer one the left' })
 
