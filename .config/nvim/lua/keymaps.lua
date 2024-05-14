@@ -19,22 +19,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
--- TIP: Disable arrow keys in normal mode
--- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
--- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
--- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
--- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
-
--- Keybinds to make split navigation easier.
---  Use CTRL+<hjkl> to switch between windows
---
---  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
--- for spelling, on or of, and for oil
 --
 -- better j and k movement
 vim.keymap.set({ 'n', 'x' }, 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -48,29 +32,29 @@ vim.keymap.set('n', '-', '<cmd>lua MiniFiles.open()<CR>', { desc = 'opens mini.f
 
 vim.keymap.set('n', '<leader>dd', '<cmd>Alpha<CR>', { desc = 'Alpha dashboard' })
 
-vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'move focus to the buffer one the left' })
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'move focus to left split' })
 
-vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'move focus to the buffer down' })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'move focus to lower split' })
 
-vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'move focus to the buffer up' })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'move focus to upper split' })
 
-vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'move window focus to the buffer on the right' })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'move window focus to right split' })
 
-vim.keymap.set('n', '<A-s>', '<C-w>x', { desc = 'swap with the next buffer in split mode' })
+vim.keymap.set('n', '<A-c>', '<C-w>x', { desc = 'swap with next split' })
 
-vim.keymap.set('n', '<A-Right>', '<cmd>vertical resize +5<CR>', { desc = 'Increase size of vertical buffer by 5' })
+vim.keymap.set('n', '<C-.>', '<cmd>vertical resize +5<CR>', { desc = 'Increase size of split vertically by 5' })
 
-vim.keymap.set('n', '<A-Left>', '<cmd>vertical resize -5<CR>', { desc = 'Decrease size of vertical buffer by 5' })
+vim.keymap.set('n', '<C-,>', '<cmd>vertical resize -5<CR>', { desc = 'Decrease size of split vertically by 5' })
 
-vim.keymap.set('n', '<A-Up>', '<cmd>resize +5<CR>', { desc = 'Increase size of horizontal buffer by 5' })
+vim.keymap.set('n', '<A-t>', '<cmd>resize +5<CR>', { desc = 'Increase size of slpit horizontally by 5' })
 
-vim.keymap.set('n', '<A-Down>', '<cmd>resize -5<CR>', { desc = 'Increase size of horizontal buffer by 5' })
+vim.keymap.set('n', '<A-s>', '<cmd>resize -5<CR>', { desc = 'Decreasecrease size of slpit horizontally by 5' })
 
-vim.keymap.set('n', '<A-v>', '<cmd>vsplit<CR>', { desc = 'vertical split two buffers' })
+vim.keymap.set('n', '<A-v>', '<cmd>vsplit<CR>', { desc = 'open a vertical split' })
 
-vim.keymap.set('n', '<A-r>', '<cmd>split<CR>', { desc = 'horizontal split' })
+vim.keymap.set('n', '<A-h>', '<cmd>split<CR>', { desc = 'open a normal horizonatl slpit' })
 
-vim.keymap.set('n', '<A-x>', '<cmd>close<CR>', { desc = 'Close split buffer' })
+vim.keymap.set('n', '<A-x>', '<cmd>close<CR>', { desc = 'Close split' })
 
 vim.keymap.set('n', '<leader>mr', '<cmd>MarkdownPreview<CR>', { desc = 'Open markdown preview in browser' })
 
