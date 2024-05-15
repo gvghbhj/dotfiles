@@ -2,7 +2,6 @@ alsa-utils
 appstream-qt5
 base
 base-devel
-bat-extras
 bluez-utils
 bottom
 brave-bin
@@ -23,6 +22,7 @@ duf
 dunst
 efibootmgr
 evtest
+eza
 fastfetch
 fd
 figlet-fonts
@@ -33,6 +33,7 @@ github-cli
 gnome-boxes
 gnome-desktop
 gnome-tweaks
+go
 gping
 gtop
 hypridle
@@ -51,6 +52,7 @@ linux-headers
 linux-zen
 linux-zen-headers
 lsof
+man-db
 man-pages
 modemmanager-qt5
 mpv
@@ -69,8 +71,10 @@ qalculate-gtk
 qt5ct
 qt6ct
 ranger
+ripgrep
 rofi-lbonn-wayland-git
 rsync
+rustup
 sassc
 snapper
 socat
