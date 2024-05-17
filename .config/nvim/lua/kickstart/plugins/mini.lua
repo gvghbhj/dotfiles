@@ -50,7 +50,12 @@ return {
 
       require('mini.comment').setup {
         options = { ignore_blank_line = true },
-        mappings = { comment = '<leader>c', comment_line = '<leader>l', comment_visual = '<leader>c', textobject = '<leader>c' },
+        mappings = {
+          comment = '<leader>c',
+          comment_line = '<leader>l',
+          comment_visual = '<leader>c',
+          textobject = '<leader>c',
+        },
       }
 
       require('mini.pairs').setup { modes = { comamnd = true } }
@@ -107,8 +112,6 @@ return {
           delay = 250,
         },
       }
-      -- ... and there is more!
-      --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
 }
