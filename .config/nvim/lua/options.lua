@@ -77,3 +77,9 @@ vim.opt.splitbelow = true
 
 vim.opt.title = true
 vim.opt.titlestring = 'nvim: %{expand("%:f")}'
+
+if vim.g.neovide then
+  vim.o.guifont = 'JetBrainsMono Nerd Font:h11'
+  vim.g.neovide_fullscreen = false
+  vim.g.neovide_remember_window_size = false
+end

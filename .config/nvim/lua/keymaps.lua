@@ -1,5 +1,4 @@
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
+-- [[ Basic Keymaps ]] See `:help vim.keymap.set()`
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
@@ -130,4 +129,16 @@ vim.api.nvim_create_autocmd('RecordingLeave', {
 })
 
 vim.keymap.set('n', '<leader>j', "<CMD>:%!jq '.'<CR>", { desc = 'Formates json file with jq' })
+
+if vim.g.neovide then
+  vim.keymap.set('n', '<C-=>', function()
+    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * 1.25
+  end, { desc = 'Zoom in' })
+
+  vim.keymap.set('n', '<C-->', function()
+    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * (1 / 1.25)
+  end, { desc = 'Zoom out' })
+
+  vim.keymap.set('n', '<C-e>', '<CMD>lua vim.g.neovide_scale_factor = 1<CR>', { desc = 'set scale factor back to 1' })
+end
 -- vim: ts=2 sts=2 sw=2 et
