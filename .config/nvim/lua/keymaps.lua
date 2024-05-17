@@ -134,7 +134,10 @@ vim.api.nvim_create_autocmd('TermOpen', {
   desc = 'sets variable for when terminal opens',
   callback = function()
     vim.cmd "let g:terminal_color_2 = '#7287fd'"
-    vim.cmd 'set spell!'
+    vim.cmd "let g:terminal_color_3 = '#CBA6F7'"
+    vim.cmd "let g:terminal_color_4 = '#89B4FA'"
+    vim.cmd "let g:terminal_color_6 = '#b4befe'"
+    vim.cmd 'set nospell'
     vim.cmd 'set nonumber! norelativenumber! nonumber!'
     vim.cmd 'startinsert'
   end,

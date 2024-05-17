@@ -34,6 +34,7 @@ require 'lazy-bootstrap'
 -- [[ Configure and install plugins ]]
 require 'lazy-plugins'
 
+-- If using neovide then call some special configuration options for it, including options and keymaps.
 if vim.g.neovide then
   require 'neovide'
 end
