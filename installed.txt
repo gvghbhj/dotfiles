@@ -29,6 +29,7 @@ figlet-fonts
 fisher
 flameshot
 floorp
+ghc
 github-cli
 gnome-boxes
 gnome-desktop
@@ -57,6 +58,7 @@ man-pages
 modemmanager-qt5
 mpv
 mullvad-vpn-cli
+neovide
 oxygen-sounds
 pamixer
 paru
