@@ -9,11 +9,11 @@ vim.g.neovide_remember_window_size = false
 -- keymaps:
 
 vim.keymap.set('n', '<C-=>', function()
-  vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * 1.25
+  vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * 1.10
 end, { desc = 'Zoom in' })
 
 vim.keymap.set('n', '<C-->', function()
-  vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * (1 / 1.25)
+  vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * (1 / 1.10)
 end, { desc = 'Zoom out' })
 
 vim.keymap.set('n', '<C-e>', '<CMD>lua vim.g.neovide_scale_factor = 1<CR>', { desc = 'set scale factor back to 1' })
