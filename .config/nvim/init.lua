@@ -34,6 +34,10 @@ require 'lazy-bootstrap'
 -- [[ Configure and install plugins ]]
 require 'lazy-plugins'
 
+if vim.g.neovide then
+  require 'neovide'
+end
+
 vim.cmd [[
   syntax on
   filetype on
