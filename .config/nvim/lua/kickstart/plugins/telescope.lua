@@ -65,10 +65,7 @@ return {
         --
         defaults = {
           prompt_prefix = ' 󰘧 ',
-          --   mappings = {
-          --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
         },
-        -- },
         pickers = {
           lsp_definitions = {
             theme = 'ivy',
@@ -92,7 +89,7 @@ return {
             theme = 'ivy',
           },
           buffers = {
-            theme = 'ivy',
+            theme = 'dropdown',
             initial_mode = 'normal',
           },
         },
