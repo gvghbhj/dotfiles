@@ -93,6 +93,7 @@ return {
           },
           buffers = {
             theme = 'ivy',
+            initial_mode = 'normal',
           },
         },
         extensions = {
