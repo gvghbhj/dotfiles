@@ -4,7 +4,7 @@
 -- See the kickstart.nvim README for more information
 local plugins = {
 
-  require 'custom.plugins.configs.bufferline',
+  -- require 'custom.plugins.configs.bufferline',
 
   require 'custom.plugins.configs.catppuccin',
 

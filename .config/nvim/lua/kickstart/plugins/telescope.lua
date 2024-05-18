@@ -91,6 +91,9 @@ return {
           treesitter = {
             theme = 'ivy',
           },
+          buffers = {
+            theme = 'ivy',
+          },
         },
         extensions = {
           ['ui-select'] = {
@@ -114,7 +117,6 @@ return {
       vim.keymap.set('n', '<leader>fd', theme_wrapper(builtin.diagnostics), { desc = '[S]earch [D]iagnostics' })
       vim.keymap.set('n', '<leader>fr', theme_wrapper(builtin.resume), { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>fo', theme_wrapper(builtin.oldfiles), { desc = '[S]earch Recent Files ("." for repeat)' })
-      vim.keymap.set('n', '<leader>fb', theme_wrapper(builtin.buffers), { desc = '[ ] Find existing buffers' })
       vim.keymap.set('n', '<leader>fk', theme_wrapper(builtin.keymaps), { desc = 'search through keymaps using telescope ' })
       vim.keymap.set('n', '<leader>fc', theme_wrapper(builtin.commands), { desc = 'search through commands using telescope ' })
       vim.keymap.set('n', '<leader>fl', theme_wrapper(builtin.command_history), { desc = 'Search through command history in nvim' })

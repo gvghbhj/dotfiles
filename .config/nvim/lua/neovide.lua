@@ -1,4 +1,4 @@
--- A file that is called if neovide is the open
+-- A file that is called if neovide is open
 
 -- Options:
 
