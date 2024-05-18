@@ -61,6 +61,8 @@ vim.keymap.set('n', '<leader>z', '<cmd>Twilight<CR>', { desc = 'Toggle twilight'
 
 vim.keymap.set('n', '<leader>n', '<cmd>set nonumber! norelativenumber! nonumber!<CR>', { desc = 'Toggle relative number' })
 
+vim.keymap.set('n', '<leader>x', '<cmd>bdelete<CR>', { desc = 'closes the current buffer' })
+
 vim.cmd 'cabbrev help vert help'
 
 --  See `:help lua-guide-autocommands`
