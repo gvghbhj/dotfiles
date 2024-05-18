@@ -51,7 +51,7 @@ function M.setup()
   --
   --
   local buttons = {
-    dashboard.button('fo', icons.ui.file .. '  Recent Files', '<cmd>Telescope oldfiles<CR>'),
+    dashboard.button('f', icons.ui.file .. '  Recent Files', '<cmd>Telescope oldfiles<CR>'),
     dashboard.button('o', icons.ui.open_folder .. '  Explorer', '<cmd>lua MiniFiles.open()<cr>'),
     dashboard.button(
       'c',
