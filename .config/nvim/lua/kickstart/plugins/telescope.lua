@@ -6,12 +6,6 @@
 -- Use the `dependencies` key to specify the dependencies of a particular plugin
 --
 -- A function that sets the theme to be ivy
-local function theme_wrapper(telescope_command)
-  return function()
-    telescope_command(require('telescope.themes').get_dropdown())
-  end
-end
-
 return {
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
@@ -59,6 +53,10 @@ return {
 
       -- [[ Configure Telescope ]]
       -- See `:help telescope` and `:help telescope.setup()`
+      --
+      -- Current telescope theme
+      local current_theme = 'dropdown'
+
       require('telescope').setup {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
@@ -68,43 +66,70 @@ return {
         },
         pickers = {
           lsp_definitions = {
-            theme = 'dropdown',
+            theme = current_theme,
           },
           lsp_references = {
-            theme = 'dropdown',
+            theme = current_theme,
           },
           lsp_implementations = {
-            theme = 'dropdown',
+            theme = current_theme,
           },
           lsp_type_definitions = {
-            theme = 'dropdown',
+            theme = current_theme,
           },
           lsp_document_symbols = {
-            theme = 'dropdown',
+            theme = current_theme,
           },
           lsp_dynamic_workspace_symbols = {
-            theme = 'dropdown',
+            theme = current_theme,
           },
           treesitter = {
-            theme = 'dropdown',
+            theme = current_theme,
           },
           oldfiles = {
-            theme = 'dropdown',
+            theme = current_theme,
           },
           find_files = {
-            theme = 'dropdown',
+            theme = current_theme,
           },
           spell_suggest = {
-            theme = 'dropdown',
+            theme = current_theme,
           },
           live_grep = {
-            theme = 'dropdown',
+            theme = current_theme,
+          },
+          help_tags = {
+            theme = current_theme,
+          },
+          keymaps = {
+            theme = current_theme,
           },
           current_buffer_fuzzy_find = {
-            theme = 'dropdown',
+            theme = current_theme,
+          },
+          builtin = {
+            theme = current_theme,
+          },
+          grep_string = {
+            theme = current_theme,
+          },
+          diagnostics = {
+            theme = current_theme,
+          },
+          resume = {
+            theme = current_theme,
+          },
+          commands = {
+            theme = current_theme,
+          },
+          command_history = {
+            theme = current_theme,
+          },
+          registers = {
+            theme = current_theme,
           },
           buffers = {
-            theme = 'dropdown',
+            theme = current_theme,
             initial_mode = 'normal',
           },
         },
@@ -123,17 +148,16 @@ return {
       local builtin = require 'telescope.builtin'
       vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[S]earch [F]iles' })
-      vim.keymap.set('n', '<leader>fh', theme_wrapper(builtin.help_tags), { desc = '[S]earch [H]elp' })
-      vim.keymap.set('n', '<leader>fk', theme_wrapper(builtin.keymaps), { desc = '[S]earch [K]eymaps' })
-      vim.keymap.set('n', '<leader>fs', theme_wrapper(builtin.builtin), { desc = '[S]earch [S]elect Telescope' })
-      vim.keymap.set('n', '<leader>fw', theme_wrapper(builtin.grep_string), { desc = '[S]earch current [W]ord' })
-      vim.keymap.set('n', '<leader>fg', theme_wrapper(builtin.live_grep), { desc = '[S]earch by [G]rep' })
-      vim.keymap.set('n', '<leader>fd', theme_wrapper(builtin.diagnostics), { desc = '[S]earch [D]iagnostics' })
-      vim.keymap.set('n', '<leader>fr', theme_wrapper(builtin.resume), { desc = '[S]earch [R]esume' })
-      vim.keymap.set('n', '<leader>fk', theme_wrapper(builtin.keymaps), { desc = 'search through keymaps using telescope ' })
-      vim.keymap.set('n', '<leader>fc', theme_wrapper(builtin.commands), { desc = 'search through commands using telescope ' })
-      vim.keymap.set('n', '<leader>fl', theme_wrapper(builtin.command_history), { desc = 'Search through command history in nvim' })
-      vim.keymap.set('n', '<leader>fm', theme_wrapper(builtin.registers), { desc = 'Search through Regsiters in nvim' })
+      vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = '[S]earch [H]elp' })
+      vim.keymap.set('n', '<leader>fk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
+      vim.keymap.set('n', '<leader>fs', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
+      vim.keymap.set('n', '<leader>fw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
+      vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
+      vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
+      vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[S]earch [R]esume' })
+      vim.keymap.set('n', '<leader>fc', builtin.commands, { desc = 'search through commands using telescope' })
+      vim.keymap.set('n', '<leader>fl', builtin.command_history, { desc = 'Search through command history in nvim' })
+      vim.keymap.set('n', '<leader>fm', builtin.registers, { desc = 'Search through Regsiters in nvim' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
