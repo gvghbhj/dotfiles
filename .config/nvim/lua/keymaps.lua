@@ -92,10 +92,19 @@ vim.keymap.set('n', '<A-z>', function()
     end
   end
 
-  if changed_height > initial_height then
-    os.execute 'kitten @ set-font-size -- +2'
+  -- If in kitty, IE terminal neovim, then increase size using kitty, if in neovide, increase size using neovide scale factor
+  if not vim.g.neovide then
+    if changed_height > initial_height then
+      os.execute 'kitten @ set-font-size -- +2'
+    else
+      os.execute 'kitten @ set-font-size -- -2'
+    end
   else
-    os.execute 'kitten @ set-font-size -- -2'
+    if changed_height > initial_height then
+      vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * (1.10 ^ 2)
+    else
+      vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * ((1 / 1.10) ^ 2)
+    end
   end
 end, { desc = 'Toggles fullscreen + Twilight mode' })
 
