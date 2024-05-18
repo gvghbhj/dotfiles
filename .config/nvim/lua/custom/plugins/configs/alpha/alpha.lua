@@ -51,12 +51,12 @@ function M.setup()
   --
   --
   local buttons = {
-    dashboard.button('fo', icons.ui.file .. '  Recent Files', '<cmd>Telescope oldfiles theme=ivy<CR>'),
+    dashboard.button('fo', icons.ui.file .. '  Recent Files', '<cmd>Telescope oldfiles<CR>'),
     dashboard.button('o', icons.ui.open_folder .. '  Explorer', '<cmd>lua MiniFiles.open()<cr>'),
     dashboard.button(
       'c',
       icons.ui.config .. '  Neovim config',
-      "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_ivy { cwd = vim.fn.stdpath 'config' })<CR>"
+      "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown { cwd = vim.fn.stdpath 'config' })<CR>"
     ),
     dashboard.button('l', '󰒲  Lazy', '<cmd>Lazy<cr>'),
     dashboard.button('q', icons.ui.close .. '  Quit NVIM', ':qa<CR>'),

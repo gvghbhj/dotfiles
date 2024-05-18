@@ -8,7 +8,7 @@
 -- A function that sets the theme to be ivy
 local function theme_wrapper(telescope_command)
   return function()
-    telescope_command(require('telescope.themes').get_ivy())
+    telescope_command(require('telescope.themes').get_dropdown())
   end
 end
 
@@ -68,25 +68,37 @@ return {
         },
         pickers = {
           lsp_definitions = {
-            theme = 'ivy',
+            theme = 'dropdown',
           },
           lsp_references = {
-            theme = 'ivy',
+            theme = 'dropdown',
           },
           lsp_implementations = {
-            theme = 'ivy',
+            theme = 'dropdown',
           },
           lsp_type_definitions = {
-            theme = 'ivy',
+            theme = 'dropdown',
           },
           lsp_document_symbols = {
-            theme = 'ivy',
+            theme = 'dropdown',
           },
           lsp_dynamic_workspace_symbols = {
-            theme = 'ivy',
+            theme = 'dropdown',
           },
           treesitter = {
-            theme = 'ivy',
+            theme = 'dropdown',
+          },
+          oldfiles = {
+            theme = 'dropdown',
+          },
+          find_files = {
+            theme = 'dropdown',
+          },
+          spell_suggest = {
+            theme = 'dropdown',
+          },
+          live_grep = {
+            theme = 'dropdown',
           },
           buffers = {
             theme = 'dropdown',
@@ -106,15 +118,15 @@ return {
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
+      vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+      vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[S]earch [F]iles' })
       vim.keymap.set('n', '<leader>fh', theme_wrapper(builtin.help_tags), { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>fk', theme_wrapper(builtin.keymaps), { desc = '[S]earch [K]eymaps' })
-      vim.keymap.set('n', '<leader>ff', theme_wrapper(builtin.find_files), { desc = '[S]earch [F]iles' })
       vim.keymap.set('n', '<leader>fs', theme_wrapper(builtin.builtin), { desc = '[S]earch [S]elect Telescope' })
       vim.keymap.set('n', '<leader>fw', theme_wrapper(builtin.grep_string), { desc = '[S]earch current [W]ord' })
       vim.keymap.set('n', '<leader>fg', theme_wrapper(builtin.live_grep), { desc = '[S]earch by [G]rep' })
       vim.keymap.set('n', '<leader>fd', theme_wrapper(builtin.diagnostics), { desc = '[S]earch [D]iagnostics' })
       vim.keymap.set('n', '<leader>fr', theme_wrapper(builtin.resume), { desc = '[S]earch [R]esume' })
-      vim.keymap.set('n', '<leader>fo', theme_wrapper(builtin.oldfiles), { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader>fk', theme_wrapper(builtin.keymaps), { desc = 'search through keymaps using telescope ' })
       vim.keymap.set('n', '<leader>fc', theme_wrapper(builtin.commands), { desc = 'search through commands using telescope ' })
       vim.keymap.set('n', '<leader>fl', theme_wrapper(builtin.command_history), { desc = 'Search through command history in nvim' })
@@ -129,19 +141,19 @@ return {
         })
       end, { desc = '[/] Fuzzily search in current buffer' })
 
-      vim.keymap.set('n', 'z=', theme_wrapper(builtin.spell_suggest), { desc = 'Spell suggestion via telescope' })
+      vim.keymap.set('n', 'z=', builtin.spell_suggest, { desc = 'Spell suggestion via telescope' })
       -- It's also possible to pass additional configuration options.
       --  See `:help telescope.builtin.live_grep()` for information about particular keys
       vim.keymap.set('n', '<leader>f/', function()
-        builtin.live_grep(require('telescope.themes').get_ivy {
+        builtin.live_grep {
           grep_open_files = true,
           prompt_title = 'Live Grep in Open Files',
-        })
+        }
       end, { desc = '[S]earch [/] in Open Files' })
 
       -- Shortcut for searching your Neovim configuration files
       vim.keymap.set('n', '<leader>fn', function()
-        builtin.find_files(require('telescope.themes').get_ivy { cwd = vim.fn.stdpath 'config' })
+        builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
     end,
   },
