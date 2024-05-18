@@ -100,6 +100,9 @@ return {
           live_grep = {
             theme = 'dropdown',
           },
+          current_buffer_fuzzy_find = {
+            theme = 'dropdown',
+          },
           buffers = {
             theme = 'dropdown',
             initial_mode = 'normal',
@@ -135,10 +138,10 @@ return {
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
         -- You can pass additional configuration to Telescope to change the theme, layout, etc.
-        builtin.current_buffer_fuzzy_find(require('telescope.themes').get_ivy {
+        builtin.current_buffer_fuzzy_find {
           winblend = 10,
           previewer = false,
-        })
+        }
       end, { desc = '[/] Fuzzily search in current buffer' })
 
       vim.keymap.set('n', 'z=', builtin.spell_suggest, { desc = 'Spell suggestion via telescope' })
