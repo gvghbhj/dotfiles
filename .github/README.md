@@ -8,6 +8,7 @@ My Hyprland dotfiles, on Arch Linux, with neovim, fish, kitty and others.
 - Terminal: [kitty](https://github.com/kovidgoyal/kitty)
 - Shell: [fish](https://fishshell.com/)
 - Editor: [neovim](https://github.com/neovim/neovim)
+- Editor GUI: [neovide (A neovim GUI)](https://github.com/neovide/neovide)
 - Launcher: [rofi](https://github.com/davatorium/rofi)
 - Browser: [floorp](https://github.com/Floorp-Projects/Floorp)
 - File Manager: [ranger](https://github.com/ranger/ranger)
