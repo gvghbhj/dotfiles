@@ -48,16 +48,6 @@ return {
         },
       }
 
-      require('mini.comment').setup {
-        options = { ignore_blank_line = true },
-        mappings = {
-          comment = '<leader>c',
-          comment_line = '<leader>l',
-          comment_visual = '<leader>c',
-          textobject = '<leader>c',
-        },
-      }
-
       require('mini.pairs').setup { modes = { comamnd = true } }
 
       require('mini.misc').setup { make_global = { 'zoom' } }
