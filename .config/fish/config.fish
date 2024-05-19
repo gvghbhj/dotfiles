@@ -15,7 +15,7 @@ if status is-interactive
     # C PROGRAMMING:
     #
     abbr --add v valgrind --tool=memcheck --leak-check=full --track-origins=yes -s 
-    abbr --add g gcc -W -Wextra -std=gnu11 -ggdb3 -pedantic-errors -lreadline -o 
+    abbr --add g gcc -W -Wextra -std=gnu11 -ggdb3 -pedantic-errors -o
 
     # MULLVAD VPN:
     
