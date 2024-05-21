@@ -1,6 +1,7 @@
 return {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
+  event = 'VeryLazy',
   opts = {
     options = {
       icons_enabled = true,
@@ -27,7 +28,7 @@ return {
     sections = {
       lualine_a = { 'mode' },
       lualine_b = { 'filesize', 'branch', 'diff', 'diagnostics' },
-      lualine_c = { { 'filename', path = 1, symbols = { unnamed = 'Neovim - The most based text editor', readonly = '' } } },
+      lualine_c = { { 'filename', path = 1, symbols = { starter = 'Neovim - The most based text editor', readonly = '' } } },
       lualine_x = { 'filetype' },
       lualine_y = { 'progress' },
       lualine_z = { 'location', 'selectioncount', 'searchcount' },

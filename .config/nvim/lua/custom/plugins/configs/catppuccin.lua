@@ -36,6 +36,9 @@ return {
       which_key = true,
       markdown = true,
       bufferline = false,
+      mini = {
+        enabled = true,
+      },
     },
     custom_highlights = function(colors)
       return {
@@ -50,6 +53,7 @@ return {
         BufferCurrentIndex = { bg = colors.base },
         BufferCurrentMod = { bg = colors.base },
         BufferCurrentSign = { bg = colors.base },
+        MiniStarterQuery = { fg = colors.lavender },
       }
     end,
   },

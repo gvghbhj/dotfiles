@@ -102,6 +102,27 @@ return {
           delay = 250,
         },
       }
+
+      require('mini.starter').setup {
+        autoopen = true,
+        items = {
+          require('mini.starter').sections.recent_files(10, false),
+        },
+        content_hooks = {
+          require('mini.starter').gen_hook.adding_bullet '-> ',
+          require('mini.starter').gen_hook.aligning('center', 'center'),
+        },
+        footer = '',
+        evaluate_single = true,
+        header = [[ 
+          ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+          ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+          ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+          ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+          ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+          ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
+          ]],
+      }
     end,
   },
 }
