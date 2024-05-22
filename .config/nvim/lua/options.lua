@@ -67,7 +67,7 @@ vim.opt.whichwrap:append '<>[]hl'
 vim.opt.laststatus = 3
 
 -- for better spacing, instead of tab
---
+
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true

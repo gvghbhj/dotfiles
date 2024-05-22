@@ -43,9 +43,9 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'move window focus to right spli
 
 vim.keymap.set('n', '<A-c>', '<C-w>x', { desc = 'swap with next split' })
 
-vim.keymap.set('n', '<C-.>', '<cmd>vertical resize +5<CR>', { desc = 'Increase size of split vertically by 5' })
+vim.keymap.set('n', '<A-.>', '<cmd>vertical resize +5<CR>', { desc = 'Increase size of split vertically by 5' })
 
-vim.keymap.set('n', '<C-,>', '<cmd>vertical resize -5<CR>', { desc = 'Decrease size of split vertically by 5' })
+vim.keymap.set('n', '<A-,>', '<cmd>vertical resize -5<CR>', { desc = 'Decrease size of split vertically by 5' })
 
 vim.keymap.set('n', '<A-t>', '<cmd>resize +5<CR>', { desc = 'Increase size of slpit horizontally by 5' })
 
@@ -53,7 +53,7 @@ vim.keymap.set('n', '<A-s>', '<cmd>resize -5<CR>', { desc = 'Decreasecrease size
 
 vim.keymap.set('n', '<A-v>', '<cmd>vsplit<CR>', { desc = 'open a vertical split' })
 
-vim.keymap.set('n', '<A-h>', '<cmd>split<CR>', { desc = 'open a normal horizonatl slpit' })
+vim.keymap.set('n', '<A-o>', '<cmd>split<CR>', { desc = 'open a normal horizonatal slpit' })
 
 vim.keymap.set('n', '<A-x>', '<cmd>close<CR>', { desc = 'Close split' })
 
