@@ -2,35 +2,7 @@ return {
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     config = function()
-      -- Better Around/Inside textobjects
-      --
-      -- Examples:
-      --  - va)  - [V]isually select [A]round [)]paren
-      --  - yinq - [Y]ank [I]nside [N]ext [']quote
-      --  - ci'  - [C]hange [I]nside [']quote
-      require('mini.ai').setup { n_lines = 500 }
-
-      -- Add/delete/replace surroundings (brackets, quotes, etc.)
-      --
-      -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
-      -- - sd'   - [S]urround [D]elete [']quotes
-      -- - sr)'  - [S]urround [R]eplace [)] [']
-      require('mini.surround').setup()
-
-      -- Simple and easy statusline.
-      --  You could remove this setup call if you don't like it,
-      --  and try some other statusline plugin
-      -- local statusline = require 'mini.statusline'
-      -- set use_icons to true if you have a Nerd Font
-      -- statusline.setup { use_icons = vim.g.have_nerd_font }
-
-      -- You can configure sections in the statusline by overriding their
-      -- default behavior. For example, here we set the section for
-      -- cursor location to LINE:COLUMN
-      -- -@diagnostic disable-next-line: duplicate-set-field
-      -- statusline.section_location = function()
-      -- return '%2l:%-2v'
-      -- end
+      -- File manager
       require('mini.files').setup {
         windows = { preview = true },
         mappings = {
@@ -48,12 +20,30 @@ return {
         },
       }
 
-      require('mini.pairs').setup { modes = { comamnd = true } }
+      -- Dashboard
+      local starter = require 'mini.starter'
+      starter.setup {
+        autoopen = true,
+        items = {
+          starter.sections.recent_files(10, false),
+        },
+        content_hooks = {
+          starter.gen_hook.adding_bullet '-> ',
+          starter.gen_hook.aligning('center', 'center'),
+        },
+        footer = '',
+        evaluate_single = true,
+        header = [[ 
+      ████ ██████           █████      ██                     
+     ███████████             █████                             
+     █████████ ███████████████████ ███   ███████████   
+    █████████  ███    █████████████ █████ ██████████████   
+   █████████ ██████████ █████████ █████ █████ ████ █████   
+ ███████████ ███    ███ █████████ █████ █████ ████ █████  
+██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
+      }
 
-      require('mini.misc').setup { make_global = { 'zoom' } }
-
-      require('mini.move').setup()
-
+      -- shows clues similar to whichkey
       local miniclue = require 'mini.clue'
       miniclue.setup {
         triggers = {
@@ -102,27 +92,14 @@ return {
           delay = 250,
         },
       }
+      -- autocompletes pairs, such as '' and ()
+      require('mini.pairs').setup { modes = { comamnd = true } }
 
-      require('mini.starter').setup {
-        autoopen = true,
-        items = {
-          require('mini.starter').sections.recent_files(10, false),
-        },
-        content_hooks = {
-          require('mini.starter').gen_hook.adding_bullet '-> ',
-          require('mini.starter').gen_hook.aligning('center', 'center'),
-        },
-        footer = '',
-        evaluate_single = true,
-        header = [[ 
-      ████ ██████           █████      ██                     
-     ███████████             █████                             
-     █████████ ███████████████████ ███   ███████████   
-    █████████  ███    █████████████ █████ ██████████████   
-   █████████ ██████████ █████████ █████ █████ ████ █████   
- ███████████ ███    ███ █████████ █████ █████ ████ █████  
-██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
-      }
+      -- for zoom functionality
+      require('mini.misc').setup { make_global = { 'zoom' } }
+
+      -- moves selected line up and down using using alt+k/j/h/l
+      require('mini.move').setup()
     end,
   },
 }
