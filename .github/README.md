@@ -7,6 +7,7 @@ My Hyprland dotfiles, on Arch Linux, with neovim, fish, kitty and others.
 - Status Bar: [Waybar](https://github.com/Alexays/Waybar)
 - Terminal: [kitty](https://github.com/kovidgoyal/kitty)
 - Shell: [fish](https://fishshell.com/)
+- Prompt: [starship](https://starship.rs/)
 - Editor: [neovim](https://github.com/neovim/neovim)
 - Editor GUI: [neovide (A neovim GUI)](https://github.com/neovide/neovide)
 - Launcher: [rofi](https://github.com/davatorium/rofi)
