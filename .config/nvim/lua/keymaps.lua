@@ -29,6 +29,8 @@ vim.keymap.set('n', '<leader>sp', '<cmd>set spell!<CR>', { desc = 'toggle spell 
 
 vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'opens mini.files' })
 
+vim.keymap.set('n', '<leader>o', '<cmd>Oil --float<CR>', { desc = 'opens mini.files' })
+
 vim.keymap.set('n', '<leader>ms', '<cmd>lua MiniStarter.open()<CR>', { desc = 'Mini.starter dashboard' })
 
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<CR>', { desc = 'open Lazy dashboard' })
