@@ -6,6 +6,8 @@ return {
   -- Formerly used to use Alpha as Dashboard, now use mini.starter
   -- require 'custom.plugins.configs.alpha',
 
+  -- require 'custom.plugins.configs.twilight',
+
   -- Colorscheme: catppuccin
   require 'custom.plugins.configs.catppuccin',
 
@@ -16,8 +18,6 @@ return {
   require 'custom.plugins.configs.indent-blankline',
 
   require 'custom.plugins.configs.markdown-preview',
-
-  require 'custom.plugins.configs.twilight',
 
   -- Colorsises colors and hex codes like '#7287fd'
   require 'custom.plugins.configs.nvim-colorizer',
