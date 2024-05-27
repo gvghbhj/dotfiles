@@ -3,22 +3,22 @@ return {
     'echasnovski/mini.nvim',
     config = function()
       -- File manager
-      require('mini.files').setup {
-        windows = { preview = true },
-        mappings = {
-          close = 'q',
-          go_in = '<CR>',
-          go_in_plus = 'L',
-          go_out = '-',
-          go_out_plus = 'H',
-          reset = 'u',
-          reveal_cwd = '@',
-          show_help = 'g?',
-          synchronize = '=',
-          trim_left = '<',
-          trim_right = '>',
-        },
-      }
+      -- require('mini.files').setup {
+      --   windows = { preview = true },
+      --   mappings = {
+      --     close = 'q',
+      --     go_in = '<CR>',
+      --     go_in_plus = 'L',
+      --     go_out = '-',
+      --     go_out_plus = 'H',
+      --     reset = 'u',
+      --     reveal_cwd = '@',
+      --     show_help = 'g?',
+      --     synchronize = '=',
+      --     trim_left = '<',
+      --     trim_right = '>',
+      --   },
+      -- }
 
       -- Dashboard
       local starter = require 'mini.starter'

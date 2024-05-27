@@ -27,7 +27,7 @@ vim.keymap.set({ 'n', 'x' }, '<Up>', "v:count == 0 ? 'gk' : 'k'", { expr = true,
 
 vim.keymap.set('n', '<leader>sp', '<cmd>set spell!<CR>', { desc = 'toggle spell check' })
 
-vim.keymap.set('n', '-', '<cmd>lua MiniFiles.open()<CR>', { desc = 'opens mini.files' })
+vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'opens mini.files' })
 
 vim.keymap.set('n', '<leader>ms', '<cmd>lua MiniStarter.open()<CR>', { desc = 'Mini.starter dashboard' })
 
@@ -161,6 +161,7 @@ vim.api.nvim_create_autocmd('TermOpen', {
     vim.cmd "let g:terminal_color_6 = '#b4befe'"
     vim.cmd 'set nospell'
     vim.cmd 'set nonumber! norelativenumber! nonumber!'
+    vim.cmd 'lua vim.bo.filetype="terminal"'
   end,
 })
 

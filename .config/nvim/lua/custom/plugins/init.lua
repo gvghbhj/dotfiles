@@ -21,4 +21,6 @@ return {
 
   -- Colorsises colors and hex codes like '#7287fd'
   require 'custom.plugins.configs.nvim-colorizer',
+
+  require 'custom.plugins.configs.oil',
 }
