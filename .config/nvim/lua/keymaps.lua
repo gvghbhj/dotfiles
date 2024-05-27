@@ -27,9 +27,9 @@ vim.keymap.set({ 'n', 'x' }, '<Up>', "v:count == 0 ? 'gk' : 'k'", { expr = true,
 
 vim.keymap.set('n', '<leader>sp', '<cmd>set spell!<CR>', { desc = 'toggle spell check' })
 
-vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'opens mini.files' })
+vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'opens oil.nvim files dashboard' })
 
-vim.keymap.set('n', '<leader>o', '<cmd>Oil --float<CR>', { desc = 'opens mini.files' })
+vim.keymap.set('n', '<leader>o', '<cmd>Oil --float<CR>', { desc = 'opens oil.nvim files dashboard in floating mode' })
 
 vim.keymap.set('n', '<leader>ms', '<cmd>lua MiniStarter.open()<CR>', { desc = 'Mini.starter dashboard' })
 
