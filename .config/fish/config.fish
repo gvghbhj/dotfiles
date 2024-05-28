@@ -11,6 +11,7 @@ if status is-interactive
     abbr --add ki killall
     abbr --add se sudoedit
     abbr --add f fzf
+    abbr --add net sudo netstat -nputwvee # to get list of outgoing network connections, consult man netstat
 
     # C PROGRAMMING:
     #
