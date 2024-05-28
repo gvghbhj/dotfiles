@@ -19,4 +19,6 @@ My Hyprland dotfiles, on Arch Linux, with neovim, fish, kitty and others.
 - Lockscreen: [Hyprlock](https://github.com/hyprwm/hyprlock)
 - Fonts: [Iosevka nerd font](https://www.nerdfonts.com/#home)
 
-<img src="/.github/screenshots/screenshot.jpg" width="100%" />
+
+<img src="/.github/screenshots/p2.jpg" width="100%" />
+<img src="/.github/screenshots/p1.jpg" width="100%" />
