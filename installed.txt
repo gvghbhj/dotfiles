@@ -26,6 +26,7 @@ evtest
 eza
 fastfetch
 fd
+figlet-fonts
 fisher
 flameshot
 floorp
@@ -58,7 +59,6 @@ man-pages
 modemmanager-qt5
 mpv
 mullvad-vpn-cli
-neovide
 oxygen-sounds
 pamixer
 paru
@@ -84,6 +84,7 @@ sof-firmware
 starship
 thermald
 tldr
+tty-clock
 udiskie
 ufw
 unzip
