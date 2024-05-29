@@ -106,8 +106,8 @@ return {
 
       local win_config = function()
         vim.opt.cmdheight = 0
-        height = math.floor(0.618 * vim.o.lines) - 12
-        width = math.floor(0.618 * vim.o.columns) - 33
+        height = math.floor(0.618 * vim.o.lines) - math.floor(vim.api.nvim_win_get_height(0) / 4.5)
+        width = math.floor(0.618 * vim.o.columns) - math.floor(vim.api.nvim_win_get_width(0) / 7.2)
         return {
           anchor = 'NW',
           border = 'rounded',
