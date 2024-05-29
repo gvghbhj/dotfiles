@@ -13,7 +13,7 @@ return {
       -- component_separators = { left = ')', right = '(' },
       -- section_separators = { left = '', right = '' },
       disabled_filetypes = {
-        statusline = { 'oil', 'terminal', 'minipick' },
+        statusline = { 'oil', 'terminal' },
         winbar = {},
       },
       ignore_focus = { 'minifiles', 'TelescopePrompt' },

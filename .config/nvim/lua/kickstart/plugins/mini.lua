@@ -104,7 +104,21 @@ return {
       local pick = require 'mini.pick'
       local extra_pick = require 'mini.extra'
 
-      pick.setup { window = { config = { border = 'rounded' }, prompt_prefix = ' 󰘧 ' }, options = { use_cache = true } }
+      local win_config = function()
+        vim.opt.cmdheight = 0
+        height = math.floor(0.618 * vim.o.lines) - 12
+        width = math.floor(0.618 * vim.o.columns) - 33
+        return {
+          anchor = 'NW',
+          border = 'rounded',
+          height = height,
+          width = width,
+          row = math.floor(0.5 * (vim.o.lines - height)),
+          col = math.floor(0.5 * (vim.o.columns - width)),
+        }
+      end
+
+      pick.setup { window = { config = win_config, prompt_prefix = ' 󰘧 ' }, options = { use_cache = true } }
       extra_pick.setup()
       vim.ui.select = MiniPick.ui_select
 
@@ -117,7 +131,7 @@ return {
       vim.keymap.set('n', '<leader>fc', '<cmd>lua MiniExtra.pickers.commands()<CR>', { desc = '[f]ind [c]ommands' })
       vim.keymap.set('n', '<leader>fr', '<cmd>lua MiniExtra.pickers.registers()<CR>', { desc = '[f]ind [r]egisters' })
       vim.keymap.set('n', '<leader>gc', '<cmd>lua MiniExtra.pickers.git_commits()<CR>', { desc = 'find [g]it [c]ommits' })
-      vim.keymap.set('n', '<leader>fs', '<cmd>lua MiniExtra.pickers.history()<CR>', { desc = '[f]ind [s]earch history' })
+      vim.keymap.set('n', '<leader>fi', '<cmd>lua MiniExtra.pickers.history()<CR>', { desc = '[f]ind command h[i]story' })
       vim.keymap.set('n', '<leader>fe', '<cmd>lua MiniPick.builtin.resume()<CR>', { desc = '[f]ind r[e]sume' })
       vim.keymap.set(
         'n',
