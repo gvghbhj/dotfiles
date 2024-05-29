@@ -106,8 +106,8 @@ return {
 
       local win_config = function()
         vim.opt.cmdheight = 0
-        height = math.floor(0.618 * vim.o.lines) - math.floor(vim.api.nvim_win_get_height(0) / 4.5)
-        width = math.floor(0.618 * vim.o.columns) - math.floor(vim.api.nvim_win_get_width(0) / 7.2)
+        height = math.floor(0.618 * vim.o.lines) - math.floor(vim.api.nvim_win_get_height(0) / 5)
+        width = math.floor(0.618 * vim.o.columns) - math.floor(vim.api.nvim_win_get_width(0) / 8)
         return {
           anchor = 'NW',
           border = 'rounded',
@@ -133,6 +133,9 @@ return {
       vim.keymap.set('n', '<leader>gc', '<cmd>lua MiniExtra.pickers.git_commits()<CR>', { desc = 'find [g]it [c]ommits' })
       vim.keymap.set('n', '<leader>fi', '<cmd>lua MiniExtra.pickers.history()<CR>', { desc = '[f]ind command h[i]story' })
       vim.keymap.set('n', '<leader>fe', '<cmd>lua MiniPick.builtin.resume()<CR>', { desc = '[f]ind r[e]sume' })
+      vim.keymap.set('n', '<leader>fl', '<cmd>lua MiniExtra.pickers.buf_lines({scope = "current"})<CR>', { desc = '[f]ind in buffer [l]ines' })
+      vim.keymap.set('n', '<leader>fa', '<cmd>lua MiniExtra.pickers.buf_lines()<CR>', { desc = '[f]ind line in [a]ll buffers' })
+
       vim.keymap.set(
         'n',
         '<leader>fn',
