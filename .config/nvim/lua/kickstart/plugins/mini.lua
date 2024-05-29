@@ -100,6 +100,33 @@ return {
 
       -- moves selected line up and down using using alt+k/j/h/l
       require('mini.move').setup()
+
+      local pick = require 'mini.pick'
+      local extra_pick = require 'mini.extra'
+
+      pick.setup { window = { config = { border = 'rounded' }, prompt_prefix = ' 󰘧 ' }, options = { use_cache = true } }
+      extra_pick.setup()
+      vim.ui.select = MiniPick.ui_select
+
+      vim.keymap.set('n', '<leader>fo', '<cmd>lua MiniExtra.pickers.oldfiles()<CR>', { desc = '[f]ind [o]ldfiles' })
+      vim.keymap.set('n', '<leader>ff', '<cmd>lua MiniPick.builtin.files({tool="fd"})<CR>', { desc = '[f]ind [F]iles' })
+      vim.keymap.set('n', '<leader>fh', '<cmd>lua MiniPick.builtin.help()<CR>', { desc = '[f]ind [H]elp' })
+      vim.keymap.set('n', '<leader>fk', '<cmd>lua MiniExtra.pickers.keymaps()<CR>', { desc = '[f]ind [K]eymaps' })
+      vim.keymap.set('n', '<leader>fg', '<cmd>lua MiniPick.builtin.grep_live({tool = "rg"})<CR>', { desc = '[f]ind by [G]rep' })
+      vim.keymap.set('n', '<leader>fd', '<cmd>lua MiniExtra.pickers.diagnostic()<CR>', { desc = '[f]ind [D]iagnostics' })
+      vim.keymap.set('n', '<leader>fc', '<cmd>lua MiniExtra.pickers.commands()<CR>', { desc = '[f]ind [c]ommands' })
+      vim.keymap.set('n', '<leader>fr', '<cmd>lua MiniExtra.pickers.registers()<CR>', { desc = '[f]ind [r]egisters' })
+      vim.keymap.set('n', '<leader>gc', '<cmd>lua MiniExtra.pickers.git_commits()<CR>', { desc = 'find [g]it [c]ommits' })
+      vim.keymap.set('n', '<leader>fs', '<cmd>lua MiniExtra.pickers.history()<CR>', { desc = '[f]ind [s]earch history' })
+      vim.keymap.set('n', '<leader>fe', '<cmd>lua MiniPick.builtin.resume()<CR>', { desc = '[f]ind r[e]sume' })
+      vim.keymap.set(
+        'n',
+        '<leader>fn',
+        "<cmd>lua MiniPick.builtin.files(nil, {source = { cwd = vim.fn.stdpath 'config'}})<CR>",
+        { desc = '[f]ind [n]eovim files' }
+      )
+      vim.keymap.set('n', 'z=', '<cmd>lua MiniExtra.pickers.spellsuggest()<CR>', { desc = 'spellsuggestions' })
+      vim.keymap.set('n', '<Tab>', '<cmd>lua MiniPick.builtin.buffers({include_current = false})<CR>', { desc = 'find buffers' })
     end,
   },
 }

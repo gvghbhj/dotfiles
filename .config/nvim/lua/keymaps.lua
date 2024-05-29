@@ -146,12 +146,12 @@ vim.api.nvim_create_autocmd('RecordingLeave', {
 vim.keymap.set('n', '<leader>j', "<CMD>:%!jq '.'<CR>", { desc = 'Formates json file with jq' })
 
 -- Buffer switching in neovim via telescope cause i donnt want have a bufferline
-vim.keymap.set(
-  'n',
-  '<Tab>',
-  '<CMD>lua require("telescope.builtin").buffers({ sort_mru = true , ignore_current_buffer = true})<CR>',
-  { desc = '[ ] Find existing buffers' }
-)
+-- vim.keymap.set(
+--   'n',
+--   '<Tab>',
+--   '<CMD>lua require("telescope.builtin").buffers({ sort_mru = true , ignore_current_buffer = true})<CR>',
+--   { desc = '[ ] Find existing buffers' }
+-- )
 
 -- autocmd that runs when the neovim terminal buffer opens
 vim.api.nvim_create_autocmd('TermOpen', {
