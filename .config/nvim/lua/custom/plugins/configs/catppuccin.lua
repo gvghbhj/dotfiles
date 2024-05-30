@@ -43,7 +43,7 @@ return {
     custom_highlights = function(colors)
       return {
         TabLineSel = { bg = colors.blue },
-        WinSeparator = { bg = colors.blue },
+        WinSeparator = { fg = colors.blue },
         TelescopePromptPrefix = { fg = colors.blue },
         TelescopeSelectionCaret = { fg = colors.blue },
         String = { style = { 'italic' } },
