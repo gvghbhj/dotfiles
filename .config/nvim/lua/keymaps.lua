@@ -35,13 +35,13 @@ vim.keymap.set('n', '<leader>ms', '<cmd>lua MiniStarter.open()<CR>', { desc = 'M
 
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<CR>', { desc = 'open Lazy dashboard' })
 
-vim.keymap.set('n', '<S-h>', '<C-w>h', { desc = 'move focus to left split' })
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'move focus to left split' })
 
-vim.keymap.set('n', '<S-j>', '<C-w>j', { desc = 'move focus to lower split' })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'move focus to lower split' })
 
-vim.keymap.set('n', '<S-k>', '<C-w>k', { desc = 'move focus to upper split' })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'move focus to upper split' })
 
-vim.keymap.set('n', '<S-l>', '<C-w>l', { desc = 'move window focus to right split' })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'move window focus to right split' })
 
 vim.keymap.set('n', '<A-c>', '<C-w>x', { desc = 'swap with next split' })
 

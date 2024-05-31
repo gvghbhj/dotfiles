@@ -8,10 +8,10 @@ return {
       theme = 'catppuccin',
       -- section_separators = { left = '', right = '' },
       -- component_separators = { left = '', right = '' },
-      component_separators = { left = '', right = '' },
-      section_separators = { left = '', right = '' },
-      -- component_separators = { left = ')', right = '(' },
-      -- section_separators = { left = '', right = '' },
+      -- component_separators = { left = '', right = '' },
+      -- section_separators = { left = '', right = '' },
+      component_separators = { left = ')', right = '(' },
+      section_separators = { left = '', right = '' },
       disabled_filetypes = {
         statusline = { 'oil', 'terminal' },
         winbar = {},
@@ -27,10 +27,19 @@ return {
     },
     sections = {
       lualine_a = { 'mode' },
-      lualine_b = { 'filesize', 'branch', 'diff', 'diagnostics' },
-      lualine_c = { { 'filename', path = 1, symbols = { starter = 'Neovim - The most based text editor', readonly = '' } } },
+      lualine_b = { 'diff', 'diagnostics' },
+      lualine_c = {
+        {
+          'filename',
+          path = 1,
+          symbols = {
+            starter = 'Neovim - The most based text editor',
+            readonly = '',
+          },
+        },
+      },
       lualine_x = { 'filetype' },
-      lualine_y = { 'progress' },
+      lualine_y = {},
       lualine_z = { 'location', 'selectioncount', 'searchcount' },
     },
     inactive_sections = {
