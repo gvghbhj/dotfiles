@@ -1,231 +1,71 @@
-# Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
+format = """
+[ ](#7287fd)\
+$directory\
+[](fg:#7287fd bg:#394260)\
+$git_branch\
+$git_status\
+[](fg:#394260 bg:#2a3046)\
+$time\
+[ ](fg:#2a3046)\
+\n$character"""
 
-# Inserts a blank line between shell prompts
-add_newline = true
 
-# Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
-success_symbol = '[ 󰘧](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-error_symbol = '[ 󰘧](bold red)'
+success_symbol = '[ ->](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = '[ ->](bold red)'
 
 [directory]
-format = '[ $path]($style)[$read_only]($read_only_style) '
-read_only = '  '
-# Disable the package module, hiding it from the prompt completely
+style = "fg:#e3e5e5 bg:#7287fd"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
 
-[git_metrics]
-disabled = false
+[git_branch]
+symbol = " "
+style = "bg:#394260"
+format = '[[ $symbol$branch ](fg:#b4befe bg:#394260)]($style)'
 
 [git_status]
-disabled = true
-
-[cmd_duration] 
-min_time = 5000
-
-[sudo]
-disabled = false
-symbol = '  '
-
-[jobs]
-format = ' [$symbol$number]($style) '
-
-[battery]
-format = ' [$symbol$percentage]($style) '
-
-[aws]
-symbol = "  "
-format = 'with [$symbol]($style)'
-
-[buf]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[c]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[conda]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[crystal]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[dart]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[docker_context]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[elixir]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[elm]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[fennel]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[fossil_branch]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[golang]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[guix_shell]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[haskell]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[haxe]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[hg_branch]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[hostname]
-ssh_symbol = " "
-format = 'with [$symbol]($style)'
-
-[java]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[julia]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[kotlin]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[lua]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[memory_usage]
-symbol = "󰍛 "
-format = 'with [$symbol]($style)'
-
-[meson]
-symbol = "󰔷 "
-format = 'with [$symbol]($style)'
-
-[nim]
-symbol = "󰆥 "
-format = 'with [$symbol]($style)'
-
-[nix_shell]
-symbol = " "
-format = 'with [$symbol]($style)'
+style = "bg:#394260"
+format = '[[($all_status$ahead_behind )](fg:#b4befe bg:#394260)]($style)'
 
 [nodejs]
 symbol = " "
-format = 'with [$symbol]($style)'
-
-[ocaml]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[os.symbols]
-Alpaquita = " "
-Alpine = " "
-AlmaLinux = " "
-Amazon = " "
-Android = " "
-Arch = " "
-Artix = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Void = " "
-Windows = "󰍲 "
-
-[package]
-symbol = "󰏗 "
-format = 'with [$symbol]($style)'
-
-[perl]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[php]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[pijul_channel]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[python]
-symbol = " "
-format = 'with [$symbol]($style)'
-
-[rlang]
-symbol = "󰟔 "
-format = 'with [$symbol]($style)'
-
-[ruby]
-symbol = " "
-format = 'with [$symbol]($style)'
+style = "bg:#212736"
+format = '[[ $symbol($version) ](fg:#b4befe bg:#212736)]($style)'
 
 [rust]
 symbol = " "
-format = 'with [$symbol]($style)'
+style = "bg:#212736"
+format = '[[ $symbol($version) ](fg:#b4befe bg:#212736)]($style)'
 
-[scala]
-symbol = " "
-format = 'with [$symbol]($style)'
+[golang]
+symbol = " "
+style = "bg:#212736"
+format = '[[ $symbol($version) ](fg:#b4befe bg:#212736)]($style)'
 
-[swift]
-symbol = " "
-format = 'with [$symbol]($style)'
+[php]
+symbol = " "
+style = "bg:#212736"
+format = '[[ $symbol($version) ](fg:#b4befe bg:#212736)]($style)'
 
-[zig]
-symbol = " "
-format = 'with [$symbol]($style)'
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#2a3046"
+format = '[[   $time ](fg:#a0a9cb bg:#2a3046)]($style)'
+
+[c]
+symbol = " "
+style = "bg:#212736"
+format = '[[ $symbol($version) ](fg:#b4befe bg:#212736)]($style)'
+
+[lua]
+symbol = "󰢱 "
+style = "bg:#212736"
+format = '[[ $symbol($version) ](fg:#b4befe bg:#212736)]($style)'
+
+[python]
+symbol = " "
+style = "bg:#212736"
+format = '[[ $symbol($version) ](fg:#b4befe bg:#212736)]($style)'
