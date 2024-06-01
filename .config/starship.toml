@@ -1,7 +1,7 @@
 format = """
-[ ](#7287fd)\
+[ ](#789beb)\
 $directory\
-[](fg:#7287fd bg:#394260)\
+[](fg:#789beb bg:#394260)\
 $git_branch\
 $git_status\
 [](fg:#394260 bg:#2a3046)\
@@ -11,11 +11,11 @@ $time\
 
 
 [character] # The name of the module we are configuring is 'character'
-success_symbol = '[ ->](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+success_symbol = '[ ->](bold blue)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
 error_symbol = '[ ->](bold red)'
 
 [directory]
-style = "fg:#ffffff bg:#7287fd"
+style = "fg:#ffffff bg:#789beb"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"

@@ -1,7 +1,7 @@
 set selection-clipboard clipboard
 set recolor
 map i recolor
-include catppuccin-mocha
+include tokyo-night-night
 set guioptions none
 map D set "first-page-column 1:1"
 map <C-d> set "first-page-column 1:2"

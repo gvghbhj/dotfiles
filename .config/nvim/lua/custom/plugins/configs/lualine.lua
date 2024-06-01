@@ -39,7 +39,7 @@ return {
         },
       },
       lualine_x = { 'filetype' },
-      lualine_y = {},
+      lualine_y = { 'filesize' },
       lualine_z = { 'location', 'selectioncount', 'searchcount' },
     },
     inactive_sections = {
