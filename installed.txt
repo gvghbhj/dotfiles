@@ -11,6 +11,7 @@ brightnessctl
 btop
 calc
 catppuccin-cursors-mocha
+catppuccin-gtk-theme-mocha
 cava
 chaotic-keyring
 chaotic-mirrorlist
