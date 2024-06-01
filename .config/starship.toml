@@ -15,7 +15,7 @@ success_symbol = '[ ->](bold green)' # The 'success_symbol' segment is being set
 error_symbol = '[ ->](bold red)'
 
 [directory]
-style = "fg:#e3e5e5 bg:#7287fd"
+style = "fg:#ffffff bg:#7287fd"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
