@@ -1,4 +1,7 @@
 if status is-interactive
+    
+    # enable starship prompt  
+    starship init fish | source
 
     # ABBREVIATIONS: 
     

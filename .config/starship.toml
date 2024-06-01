@@ -6,8 +6,7 @@ $git_branch\
 $git_status\
 [](fg:#394260 bg:#2a3046)\
 $time\
-[ ](fg:#2a3046)\
-\n$character"""
+[ ](fg:#2a3046)"""
 
 
 [character] # The name of the module we are configuring is 'character'
