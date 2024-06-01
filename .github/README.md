@@ -20,5 +20,5 @@ My Hyprland dotfiles, on Arch Linux, with neovim, fish, kitty and others.
 - Fonts: [Iosevka nerd font](https://www.nerdfonts.com/#home)
 
 
-<img src="/.github/screenshots/sc-1.jpg" width="100%" />
 <img src="/.github/screenshots/sc-2.jpg" width="100%" />
+<img src="/.github/screenshots/sc-1.jpg" width="100%" />
