@@ -61,7 +61,7 @@ vim.keymap.set('n', '<A-x>', '<cmd>close<CR>', { desc = 'Close split' })
 
 vim.keymap.set('n', '<leader>mr', '<cmd>MarkdownPreview<CR>', { desc = 'Open markdown preview in browser' })
 
-vim.keymap.set('n', '<leader>z', '<cmd>Twilight<CR>', { desc = 'Toggle twilight' })
+-- vim.keymap.set('n', '<leader>z', '<cmd>Twilight<CR>', { desc = 'Toggle twilight' })
 
 vim.keymap.set('n', '<leader>n', '<cmd>set nonumber! norelativenumber! nonumber!<CR>', { desc = 'Toggle relative number' })
 
