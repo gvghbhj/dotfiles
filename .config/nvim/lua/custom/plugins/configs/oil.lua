@@ -13,7 +13,7 @@ return {
     },
     keymaps = {
       ['?'] = 'actions.show_help',
-      ['<C-q>'] = 'actions.close',
+      ['<S-q>'] = 'actions.close',
     },
   },
   dependencies = { 'nvim-tree/nvim-web-devicons' },

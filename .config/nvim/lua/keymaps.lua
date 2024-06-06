@@ -29,7 +29,8 @@ vim.keymap.set('n', '<leader>sp', '<cmd>set spell!<CR>', { desc = 'toggle spell 
 
 vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'opens oil.nvim files dashboard' })
 
-vim.keymap.set('n', '<leader>o', '<cmd>Oil --float<CR>', { desc = 'opens oil.nvim files dashboard in floating mode' })
+-- Useful when opening oil in mini.starter
+vim.keymap.set('n', '<leader>o', '<cmd>Oil<CR>', { desc = 'opens oil.nvim files dashboard in floating mode' })
 
 vim.keymap.set('n', '<leader>ms', '<cmd>lua MiniStarter.open()<CR>', { desc = 'Mini.starter dashboard' })
 
@@ -89,14 +90,14 @@ vim.keymap.set('n', '<A-z>', function()
   MiniMisc.zoom()
   local changed_height = vim.api.nvim_win_get_height(0)
   -- Checks if twilight is enabled
-  local is_enabled = require('twilight.view').enabled
-  if is_enabled and changed_height <= initial_height then
-    vim.cmd 'TwilightDisable'
-  else
-    if changed_height > initial_height then
-      vim.cmd 'TwilightEnable'
-    end
-  end
+  -- local is_enabled = require('twilight.view').enabled
+  -- if is_enabled and changed_height <= initial_height then
+  --   vim.cmd 'TwilightDisable'
+  -- else
+  --   if changed_height > initial_height then
+  --     vim.cmd 'TwilightEnable'
+  --   end
+  -- end
 
   -- If in kitty, IE terminal neovim, then increase size using kitty, if in neovide, increase size using neovide scale factor
   if not vim.g.neovide then
