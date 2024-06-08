@@ -54,6 +54,7 @@ return {
         BufferCurrentMod = { bg = colors.base },
         BufferCurrentSign = { bg = colors.base },
         MiniStarterQuery = { fg = colors.lavender },
+        MiniIndentscopeSymbolOff = { fg = colors.surface0 },
       }
     end,
   },
