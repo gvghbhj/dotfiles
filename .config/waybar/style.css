@@ -22,8 +22,8 @@ window#waybar {
   transition-property: background-color;
   transition-duration: 0.5s;
   background: @mantle;
-  border: 2px solid #b4befe;
-  border-radius: 10px;
+  border: 1.75px solid #b4befe;
+  border-radius: 8px;
   /* padding: 5px; */
   /* margin: 0; */
 }
