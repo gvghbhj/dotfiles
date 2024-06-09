@@ -118,14 +118,16 @@ return {
 
       local pick = require 'mini.pick'
       local extra_pick = require 'mini.extra'
+      local guicursor = vim.o.guicursor
 
       local win_config = function()
         vim.opt.cmdheight = 0
-        height = math.floor(0.48 * vim.o.lines)
-        width = math.floor(0.48 * vim.o.columns)
+        height = math.floor(0.4 * vim.o.lines)
+        width = math.floor(0.4 * vim.o.columns)
         return {
-          anchor = 'NW',
+          focusable = true,
           border = 'rounded',
+          anchor = 'NW',
           height = height,
           width = width,
           row = math.floor(0.5 * (vim.o.lines - height)),
@@ -133,7 +135,60 @@ return {
         }
       end
 
-      pick.setup { window = { config = win_config, prompt_prefix = ' 󰘧 ' }, options = { use_cache = true } }
+      pick.setup {
+        delay = {
+          -- Delay between forcing asynchronous behavior
+          async = 1,
+
+          -- Delay between computation start and visual feedback about it
+          busy = 5,
+        },
+        window = {
+          config = win_config,
+          prompt_prefix = ' 󰘧 ',
+        },
+        options = {
+          use_cache = true,
+        },
+        mappings = {
+          caret_left = '<Left>',
+          caret_right = '<Right>',
+
+          choose = '<CR>',
+          choose_in_split = '<C-s>',
+          choose_in_tabpage = '<C-t>',
+          choose_in_vsplit = '<C-v>',
+          choose_marked = '<M-CR>',
+
+          delete_char = '<BS>',
+          delete_char_right = '<Del>',
+          delete_left = '<C-u>',
+          delete_word = '<C-w>',
+
+          mark = '<C-x>',
+          mark_all = '<C-a>',
+
+          move_down = '<C-n>',
+          move_start = '<C-g>',
+          move_up = '<C-p>',
+
+          paste = '<C-r>',
+
+          refine = '<C-Space>',
+          refine_marked = '<M-Space>',
+
+          scroll_down = '<C-j>',
+          scroll_left = '<C-h>',
+          scroll_right = '<C-l>',
+          scroll_up = '<C-k>',
+
+          stop = '<Esc>',
+
+          toggle_info = '<S-Tab>',
+          toggle_preview = '<Tab>',
+        },
+      }
+
       extra_pick.setup()
       vim.ui.select = MiniPick.ui_select
 
