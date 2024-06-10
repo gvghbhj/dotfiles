@@ -28,7 +28,7 @@ return {
           starter.sections.recent_files(10, false),
         },
         content_hooks = {
-          starter.gen_hook.adding_bullet '-> ',
+          starter.gen_hook.adding_bullet '  ',
           starter.gen_hook.aligning('center', 'center'),
         },
         footer = '',
@@ -118,13 +118,16 @@ return {
 
       local pick = require 'mini.pick'
       local extra_pick = require 'mini.extra'
-      local guicursor = vim.o.guicursor
 
       local win_config = function()
         vim.opt.cmdheight = 0
-        height = math.floor(0.4 * vim.o.lines)
-        width = math.floor(0.4 * vim.o.columns)
+        vim.api.nvim_set_current_win(0)
+        height = math.floor(0.49 * vim.o.lines)
+        width = math.floor(0.43 * vim.o.columns)
         return {
+          style = 'minimal',
+          zindex = 50,
+          relative = 'editor',
           focusable = true,
           border = 'rounded',
           anchor = 'NW',
@@ -148,6 +151,7 @@ return {
           prompt_prefix = ' 󰘧 ',
         },
         options = {
+          content_from_bottom = true,
           use_cache = true,
         },
         mappings = {
