@@ -60,6 +60,7 @@ man-pages
 modemmanager-qt5
 mpv
 mullvad-vpn-cli
+neovide
 net-tools
 oxygen-sounds
 pamixer
