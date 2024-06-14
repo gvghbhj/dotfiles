@@ -121,9 +121,8 @@ return {
 
       local win_config = function()
         vim.opt.cmdheight = 0
-        vim.api.nvim_set_current_win(0)
-        height = math.floor(0.49 * vim.o.lines)
-        width = math.floor(0.43 * vim.o.columns)
+        height = math.floor(0.55 * vim.o.lines)
+        width = math.floor(0.47 * vim.o.columns)
         return {
           style = 'minimal',
           zindex = 50,
