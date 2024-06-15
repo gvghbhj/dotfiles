@@ -8,7 +8,7 @@
     fg-col2: #cdd6f4;
     grey: #6c7086;
 
-    width: 600;
+    fixed-num-lines: false;
     font: "Iosevka NFM 13";
 }
 
@@ -22,21 +22,22 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
+    fixed-num-lines: false;
     transparency:                "real";
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
     x-offset:                    0px;
     y-offset:                    0px;
-    width:			 600px;
-    height:			 400px;
+    width:			 450px;
+    height:			 500px;
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
     border:                      4px solid;
     border-radius:              20px;
     border-color: @border-col;
-    background-color: @bg-col;
+    background-color: @bg0;
 }
 
 mainbox {
@@ -109,9 +110,9 @@ element-icon {
     cursor:                      inherit;
 }
 
-element selected {
-    background-color:  @selected-col ;
-    text-color: @bg-col  ;
+element.selected.normal {
+    background-color:  @blue ;
+    text-color: @bg0  ;
 }
 
 mode-switcher {

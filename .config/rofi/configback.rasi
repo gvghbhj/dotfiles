@@ -2,12 +2,12 @@ configuration {
   display-drun: "Applications:";
   display-window: "Windows:";
   drun-display-format: "{name}";
-  font: "DaddyTimeMono Nerd Font Mono 10";
-  modi: "window,run,drun,calc";
+  window-format:              "{w}{c}";
+  modi: "window,run,drun,filebrowser";
   
   // enabling the icons
-  show-icons: true;
-  icon-theme: "Papirus";
+  // show-icons: true;
+  // icon-theme: "Numix-Circle";
 }
 
-@theme "/home/gn/.local/share/rofi/themes/catppuccin-mocha.rasi"
+@theme "/home/gn/.config/rofi/themes/colors-normal.rasi"

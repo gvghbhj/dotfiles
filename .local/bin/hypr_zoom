@@ -1,18 +1,18 @@
 #!/bin/fish
 
 function zoom_in # function which zooms in to hyprland desktop
-  set current_hypr_zoom (hyprctl getoption misc:cursor_zoom_factor | awk '/float: / {print $2}')
+  set current_hypr_zoom (hyprctl getoption cursor:zoom_factor | awk '/float: / {print $2}')
   set current_hypr_zoom (math $current_hypr_zoom + 0.5)
-  hyprctl keyword misc:cursor_zoom_factor $current_hypr_zoom
+  hyprctl keyword cursor:zoom_factor $current_hypr_zoom
   notify-send "Current zoom level: $current_hypr_zoom"
 end
 
 
 function zoom_out
-  set current_hypr_zoom (hyprctl getoption misc:cursor_zoom_factor | awk '/float: / {print $2}')
+  set current_hypr_zoom (hyprctl getoption cursor:zoom_factor | awk '/float: / {print $2}')
   set current_hypr_zoom (math $current_hypr_zoom - 0.5)
   if test $current_hypr_zoom -ge 1
-    hyprctl keyword misc:cursor_zoom_factor $current_hypr_zoom
+    hyprctl keyword cursor:zoom_factor $current_hypr_zoom
     notify-send "Current zoom level: $current_hypr_zoom"
   end
 end
