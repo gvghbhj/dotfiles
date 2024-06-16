@@ -1,6 +1,7 @@
 return {
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
       -- File manager
       require('mini.files').setup {
