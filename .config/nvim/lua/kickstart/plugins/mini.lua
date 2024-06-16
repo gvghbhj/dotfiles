@@ -121,7 +121,6 @@ return {
       local extra_pick = require 'mini.extra'
 
       local win_config = function()
-        vim.opt.cmdheight = 0
         height = math.floor(0.55 * vim.o.lines)
         width = math.floor(0.47 * vim.o.columns)
         return {
@@ -218,16 +217,6 @@ return {
       )
       vim.keymap.set('n', 'z=', '<cmd>lua MiniExtra.pickers.spellsuggest()<CR>', { desc = 'spellsuggestions' })
       vim.keymap.set('n', '<Tab>', '<cmd>lua MiniPick.builtin.buffers({include_current = false})<CR>', { desc = 'find buffers' })
-
-      -- require('mini.indentscope').setup {
-      --   draw = {
-      --     delay = 2,
-      --     animation = require('mini.indentscope').gen_animation.none(),
-      --   },
-      --   options = {
-      --     try_as_border = true,
-      --   },
-      -- }
     end,
   },
 }
