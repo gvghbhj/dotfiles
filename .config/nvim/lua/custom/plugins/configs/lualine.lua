@@ -1,7 +1,7 @@
 return {
   'nvim-lualine/lualine.nvim',
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
   event = 'VeryLazy',
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {
     options = {
       icons_enabled = true,
@@ -14,7 +14,6 @@ return {
       -- section_separators = { left = '', right = '' },
       disabled_filetypes = {
         statusline = { 'oil' },
-        winbar = {},
       },
       ignore_focus = { 'minifiles', 'TelescopePrompt' },
       always_divide_middle = true,
@@ -42,17 +41,5 @@ return {
       lualine_y = { 'filesize' },
       lualine_z = { 'location', 'selectioncount', 'searchcount' },
     },
-    inactive_sections = {
-      lualine_a = {},
-      lualine_b = {},
-      lualine_c = { 'filename' },
-      lualine_x = { 'location' },
-      lualine_y = {},
-      lualine_z = {},
-    },
-    tabline = {},
-    winbar = {},
-    inactive_winbar = {},
-    extensions = {},
   },
 }

@@ -2,7 +2,7 @@
 
 -- Options:
 
-vim.o.guifont = 'JetBrainsMono Nerd Font:h11:#e-subpixelantialias'
+vim.o.guifont = 'IosevkaTerm NF:h12.5:#e-subpixelantialias'
 vim.g.neovide_fullscreen = false
 vim.g.neovide_remember_window_size = false
 
