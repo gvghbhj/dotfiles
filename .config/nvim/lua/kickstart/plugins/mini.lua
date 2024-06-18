@@ -115,7 +115,19 @@ return {
       require('mini.misc').setup { make_global = { 'zoom' } }
 
       -- moves selected line up and down using using alt+k/j/h/l
-      require('mini.move').setup()
+      require('mini.move').setup {
+        mappings = {
+          left = '<S-h>',
+          right = '<S-l>',
+          down = '<S-j>',
+          up = '<S-k>',
+
+          line_left = '<S-h>',
+          line_right = '<S-l>',
+          line_down = '<S-j>',
+          line_up = '<S-k>',
+        },
+      }
 
       local pick = require 'mini.pick'
       local extra_pick = require 'mini.extra'

@@ -66,7 +66,7 @@ vim.keymap.set('n', '<leader>mr', '<cmd>MarkdownPreview<CR>', { desc = 'Open mar
 
 vim.keymap.set('n', '<leader>n', '<cmd>set nonumber! norelativenumber! nonumber!<CR>', { desc = 'Toggle relative number' })
 
-vim.keymap.set('n', '<leader>x', '<cmd>bdelete<CR>', { desc = 'closes the current buffer' })
+vim.keymap.set('n', '<leader>x', '<cmd>bdelete!<CR>', { desc = 'closes the current buffer' })
 
 vim.cmd 'cabbrev help vert help'
 
