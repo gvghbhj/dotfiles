@@ -20,5 +20,5 @@ return {
   require 'custom.plugins.configs.markdown-preview',
 
   -- Colorsises colors and hex codes like '#7287fd'
-  require 'custom.plugins.configs.nvim-colorizer',
+  -- require 'custom.plugins.configs.nvim-colorizer',
 }

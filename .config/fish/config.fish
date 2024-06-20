@@ -58,5 +58,3 @@ if status is-interactive
     bind \en 'cliphist list | fzf --preview="" --height=75% -d "\t" --with-nth 2 | cliphist decode | wl-copy;commandline -f repaint'
     bind \cy execute
 end
-
-

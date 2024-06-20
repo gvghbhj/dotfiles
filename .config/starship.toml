@@ -10,8 +10,8 @@ $time\
 
 
 [character] # The name of the module we are configuring is 'character'
-success_symbol = '[ ->](bold blue)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-error_symbol = '[ ->](bold red)'
+success_symbol = '[ 󰘧](bold blue)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = '[ 󰘧](bold red)'
 
 [directory]
 style = "fg:#ffffff bg:#789beb"
