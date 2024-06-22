@@ -22,8 +22,9 @@ return {
       }
 
       local open_mini_files_to_file_cwd = function()
+        local is_file = not vim.bo.buftype or vim.bo.buftype == ''
         local cur_dir = vim.api.nvim_buf_get_name(0)
-        if cur_dir == '' or cur_dir == '/home/gn/Starter' then
+        if not is_file then
           cur_dir = vim.fn.getcwd()
         end
         MiniFiles.open(cur_dir)
