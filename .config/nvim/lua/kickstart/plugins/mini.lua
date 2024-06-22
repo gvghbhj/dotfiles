@@ -21,6 +21,16 @@ return {
         },
       }
 
+      local open_mini_files_to_file_cwd = function()
+        local cur_dir = vim.api.nvim_buf_get_name(0)
+        if cur_dir == '' or cur_dir == '/home/gn/Starter' then
+          cur_dir = vim.fn.getcwd()
+        end
+        MiniFiles.open(cur_dir)
+        MiniFiles.reveal_cwd()
+      end
+
+      vim.keymap.set('n', '<leader>o', open_mini_files_to_file_cwd, { desc = 'opens mini.files' })
       -- Dashboard
       local starter = require 'mini.starter'
       starter.setup {
