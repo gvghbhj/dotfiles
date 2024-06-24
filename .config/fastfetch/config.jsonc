@@ -4,44 +4,30 @@
         "type": "small"
     },
     "display": {
-        "separator": "  ",
-        "color": {
-            "keys": "magenta"
+        "keyWidth": 11,
+        "bar": {
+            "charElapsed": "=",
+            "charTotal": "-",
+            "width": 13
         },
-        "size": {
-            "ndigits": 0,
-            "maxPrefix": "MB"
+        "percent": {
+            "type": 2
         }
     },
     "modules": [
+        "title",
+        "separator",
+        "memory",
+        "swap",
         {
-            "type": "title",
-            "color": {
-                "user": "green",
-                "at": "red",
-                "host": "blue"
-            }
+            "type": "disk",
+            "folders": "/"
         },
+        "battery",
         {
-            "type": "os",
-            "key": "",
-            "format": "{2} {8}"
-        },
-        {
-            "type": "kernel",
-            "key": ""
-        },
-        {
-            "type": "memory",
-            "key": ""
-        },
-        {
-            "type": "packages",
-            "key": ""
-        },
-        {
-            "type": "uptime",
-            "key": ""
+            "type": "colors",
+            "paddingLeft": 10,
+            "symbol": "circle"
         }
     ]
 }
