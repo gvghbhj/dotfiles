@@ -64,7 +64,6 @@ vim.opt.cmdheight = 0
 vim.opt.shell = '/usr/bin/fish'
 vim.opt.termguicolors = true
 vim.opt.whichwrap:append '<>[]hl'
-vim.opt.laststatus = 3
 
 -- for better spacing, instead of tab
 

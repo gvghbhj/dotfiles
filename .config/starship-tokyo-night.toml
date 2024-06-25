@@ -1,0 +1,70 @@
+format = """
+[ ](#789beb)\
+$directory\
+[](fg:#789beb bg:#394260)\
+$git_branch\
+$git_status\
+[](fg:#394260 bg:#2a3046)\
+$time\
+[ ](fg:#2a3046)"""
+
+
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[ 󰘧](bold blue)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = '[ 󰘧](bold red)'
+
+[directory]
+style = "fg:#ffffff bg:#789beb"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = " "
+style = "bg:#394260"
+format = '[[ $symbol$branch ](fg:#b4befe bg:#394260)]($style)'
+
+[git_status]
+style = "bg:#394260"
+format = '[[($all_status$ahead_behind )](fg:#b4befe bg:#394260)]($style)'
+
+[nodejs]
+symbol = " "
+style = "bg:#212736"
+format = '[[ $symbol($version) ](fg:#b4befe bg:#212736)]($style)'
+
+[rust]
+symbol = " "
+style = "bg:#212736"
+format = '[[ $symbol($version) ](fg:#b4befe bg:#212736)]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#212736"
+format = '[[ $symbol($version) ](fg:#b4befe bg:#212736)]($style)'
+
+[php]
+symbol = " "
+style = "bg:#212736"
+format = '[[ $symbol($version) ](fg:#b4befe bg:#212736)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#2a3046"
+format = '[[   $time ](fg:#a0a9cb bg:#2a3046)]($style)'
+
+[c]
+symbol = " "
+style = "bg:#212736"
+format = '[[ $symbol($version) ](fg:#b4befe bg:#212736)]($style)'
+
+[lua]
+symbol = "󰢱 "
+style = "bg:#212736"
+format = '[[ $symbol($version) ](fg:#b4befe bg:#212736)]($style)'
+
+[python]
+symbol = " "
+style = "bg:#212736"
+format = '[[ $symbol($version) ](fg:#b4befe bg:#212736)]($style)'
