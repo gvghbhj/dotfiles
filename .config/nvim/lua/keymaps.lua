@@ -165,7 +165,6 @@ vim.api.nvim_create_autocmd('TermOpen', {
     vim.cmd "let g:terminal_color_14 = '#b4befe'"
     vim.cmd 'set nospell'
     vim.cmd 'set nonumber! norelativenumber! nonumber!'
-    vim.bo.filetype = 'terminal'
   end,
 })
 
