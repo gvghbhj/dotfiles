@@ -153,10 +153,16 @@ vim.keymap.set('n', '<leader>j', "<CMD>:%!jq '.'<CR>", { desc = 'Formates json f
 vim.api.nvim_create_autocmd('TermOpen', {
   desc = 'sets variable for when terminal opens',
   callback = function()
-    vim.cmd "let g:terminal_color_2 = '#7287fd'"
+    vim.cmd "let g:terminal_color_2 = '#7dc4e4'"
+    vim.cmd "let g:terminal_color_10 = '#7dc4e4'"
     vim.cmd "let g:terminal_color_3 = '#CBA6F7'"
-    vim.cmd "let g:terminal_color_4 = '#89B4FA'"
+    vim.cmd "let g:terminal_color_11 = '#CBA6F7'"
+    vim.cmd "let g:terminal_color_4 = '#789beb'"
+    vim.cmd "let g:terminal_color_12 = '#789beb'"
+    vim.cmd "let g:terminal_color_5 = '#F5C2E7'"
+    vim.cmd "let g:terminal_color_13 = '#F5C2E7'"
     vim.cmd "let g:terminal_color_6 = '#b4befe'"
+    vim.cmd "let g:terminal_color_14 = '#b4befe'"
     vim.cmd 'set nospell'
     vim.cmd 'set nonumber! norelativenumber! nonumber!'
     vim.bo.filetype = 'terminal'
