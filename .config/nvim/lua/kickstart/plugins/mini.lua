@@ -276,7 +276,7 @@ return {
               '%<', -- Mark general truncate point
               { hl = 'MiniStatuslineFilename', strings = { filename } },
               '%=', -- End left alignment
-              { hl = 'MiniStatuslineFileinfo', strings = { fileinfo } },
+              { hl = 'MiniStatuslineDevinfo', strings = { fileinfo } },
               { hl = mode_hl, strings = { search, location } },
             }
           end,
