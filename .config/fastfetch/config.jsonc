@@ -33,10 +33,6 @@
             "type": "kernel"
         },
         {
-            "key": "║ {#36}󰇄 desktop {#keys}║",
-            "type": "de"
-        },
-        {
             "key": "║ {#31} term    {#keys}║",
             "type": "terminal"
         },
