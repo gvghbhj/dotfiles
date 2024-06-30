@@ -38,7 +38,6 @@ gnome-desktop
 gnome-tweaks
 go
 gping
-htop
 hypridle
 hyprland
 hyprlock
@@ -54,6 +53,7 @@ libwnck3
 linux-headers
 linux-zen
 linux-zen-headers
+lsof
 man-db
 man-pages
 modemmanager-qt5
