@@ -144,8 +144,8 @@ return {
       local extra_pick = require 'mini.extra'
 
       local win_config = function()
-        height = math.floor(0.55 * vim.o.lines)
-        width = math.floor(0.47 * vim.o.columns)
+        local height = math.floor(0.55 * vim.o.lines)
+        local width = math.floor(0.47 * vim.o.columns)
         return {
           style = 'minimal',
           zindex = 50,
@@ -240,6 +240,7 @@ return {
       )
       vim.keymap.set('n', 'z=', '<cmd>lua MiniExtra.pickers.spellsuggest()<CR>', { desc = 'spellsuggestions' })
       vim.keymap.set('n', '<Tab>', '<cmd>lua MiniPick.builtin.buffers({include_current = false})<CR>', { desc = 'find buffers' })
+      vim.keymap.set('n', '<leader>fb', MiniExtra.pickers.explorer, { desc = 'opens the mini.pick file[b]rowser' })
 
       local hipatterns = require 'mini.hipatterns'
       hipatterns.setup {
