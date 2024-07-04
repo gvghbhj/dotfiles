@@ -10,7 +10,7 @@ My Hyprland dotfiles, on Arch Linux, with neovim, fish, kitty and others.
 - Prompt: [starship](https://starship.rs/)
 - Editor: [neovim](https://github.com/neovim/neovim)
 - Editor GUI: [neovide (A neovim GUI)](https://github.com/neovide/neovide)
-- Launcher: [rofi](https://github.com/davatorium/rofi)
+- Launcher: [fzf](https://github.com/junegunn/fzf)
 - Browser: [floorp](https://github.com/Floorp-Projects/Floorp)
 - File Manager: [ranger](https://github.com/ranger/ranger)
 - Notifications: [dunst](https://github.com/dunst-project/dunst)
