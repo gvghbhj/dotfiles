@@ -75,7 +75,6 @@ qt5ct
 qt6ct
 ranger
 ripgrep
-rofi-lbonn-wayland-git
 rsync
 rustup
 sassc

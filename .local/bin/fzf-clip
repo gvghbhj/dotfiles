@@ -1,0 +1,3 @@
+#!/usr/bin/env fish
+
+cliphist list | fzf-launcher --preview="" | cliphist decode | wl-copy
