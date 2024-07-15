@@ -271,6 +271,10 @@ return {
             local location = MiniStatusline.section_location { trunc_width = 1000 }
             local search = MiniStatusline.section_searchcount { trunc_width = 75 }
 
+            if fileinfo == ' ministarter' then
+              filename = 'Neovim, the greatest text editor in the world'
+            end
+
             return MiniStatusline.combine_groups {
               { hl = mode_hl, strings = { mode } },
               { hl = 'MiniStatuslineDevinfo', strings = { git, diff, diagnostics } },

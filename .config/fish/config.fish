@@ -53,6 +53,6 @@ if status is-interactive
     bind \ef 'fg; commandline -f repaint'
     bind \ez 'zi; commandline -f repaint'
     bind \en 'cliphist list | fzf --preview="" --height=75% -d "\t" --with-nth 2 | cliphist decode | wl-copy;commandline -f repaint'
-    bind \eo 'kitty +open (fzf)'
+    bind \eo 'nvim (fzf)'
     bind \cy execute
 end
