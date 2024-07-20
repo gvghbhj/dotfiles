@@ -2,6 +2,7 @@
   "include": "~/.config/waybar/modules",
   "layer": "bottom",
   "exclusive": true,
+  "width": 1500,
   "height": 20,
   "passthrough": false,
   "position": "top",
