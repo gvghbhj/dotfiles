@@ -22,3 +22,4 @@ My Hyprland dotfiles, on Arch Linux, with neovim, fish, kitty and others.
 
 <img src="/.github/screenshots/sc-1.jpg" width="100%" />
 <img src="/.github/screenshots/sc-2.jpg" width="100%" />
+<img src="/.github/screenshots/sc-3.jpg" width="100%" />
