@@ -1,0 +1,26 @@
+[Default Applications]
+x-scheme-handler/http=floorp.desktop
+x-scheme-handler/https=floorp.desktop
+x-scheme-handler/chrome=floorp.desktop
+text/html=floorp.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
+image/png=kitty-open.desktop
+image/jpeg=kitty-open.desktop
+image/webp=kitty-open.desktop
+x-scheme-handler/obsidian=obsidian.desktop
+textpdf=firefox.desktop
+pdf=firefox.desktop
+application/pdf=org.pwmt.zathura.desktop
+applications/pdf=okular.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
+
+[Added Associations]
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+text/html=firefox.desktop;
