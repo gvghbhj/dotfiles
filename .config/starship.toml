@@ -6,8 +6,8 @@ add_newline = true
 
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
-success_symbol = '[ 󰘧](bold blue)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-error_symbol = '[ 󰘧](bold red)'
+success_symbol = '[ 𝝺](bold blue)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = '[ 𝝺](bold red)'
 
 [directory]
 format = '[ $path]($style)[$read_only]($read_only_style) '
