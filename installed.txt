@@ -43,6 +43,7 @@ hyprland
 hyprlock
 hyprpaper
 hyprpicker-git
+hyprwayland-scanner
 iio-sensor-proxy
 intel-ucode
 jq
@@ -95,4 +96,5 @@ wget
 xorg-server
 xorg-xbacklight
 xorg-xdpyinfo
+zellij
 zoxide
