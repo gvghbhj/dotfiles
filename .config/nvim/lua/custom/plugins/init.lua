@@ -12,7 +12,7 @@ return {
   require 'custom.plugins.configs.catppuccin',
 
   -- statusline
-  -- require 'custom.plugins.configs.lualine',
+  require 'custom.plugins.configs.lualine',
 
   -- for better formatting
   require 'custom.plugins.configs.indent-blankline',
