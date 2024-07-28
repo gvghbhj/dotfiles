@@ -4,7 +4,8 @@ My Hyprland dotfiles, on Arch Linux, with neovim, fish, kitty and others.
 
 - Operating System: [Arch Linux](https://archlinux.org/)
 - Window Manager: [Hyprland](https://github.com/hyprwm/Hyprland)
-- Status Bar: [Waybar](https://github.com/Alexays/Waybar)
+- Status Bar: [AGS](https://github.com/Aylur/ags)
+- AGS config: [HyprPanel](https://github.com/Jas-SinghFSU/HyprPanel)
 - Terminal: [kitty](https://github.com/kovidgoyal/kitty)
 - Shell: [fish](https://fishshell.com/)
 - Prompt: [starship](https://starship.rs/)
