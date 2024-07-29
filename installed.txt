@@ -1,6 +1,7 @@
 alsa-utils
 appstream-qt5
 ascii
+aylurs-gtk-shell
 base
 base-devel
 bluez-utils
@@ -20,6 +21,7 @@ cliphist
 cmatrix
 cmus
 colord
+dart-sass
 duf
 dunst
 efibootmgr
@@ -42,7 +44,6 @@ hypridle
 hyprland
 hyprlock
 hyprpaper
-hyprpicker-git
 hyprwayland-scanner
 iio-sensor-proxy
 intel-ucode
@@ -60,13 +61,14 @@ man-pages
 modemmanager-qt5
 mpv
 mullvad-vpn-cli
+neovide
 net-tools
 oxygen-sounds
 pamixer
+papirus-icon-theme
 paru
 pass-otp
 pm-utils
-python-cairo
 python-dbus-next
 python-numpy
 python-psutil
