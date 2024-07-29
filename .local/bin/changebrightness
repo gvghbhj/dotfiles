@@ -11,8 +11,8 @@ end
 switch $argv[1]
 case up
 	brightnessctl set +5%
-	send_notification
+	#send_notification
 case down
 	brightnessctl set 5%-
-	send_notification
+	#send_notification
 end

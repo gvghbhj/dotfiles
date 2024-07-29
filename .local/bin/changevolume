@@ -13,16 +13,16 @@ case up
 	# Set the volume on (if it was muted)
 	pamixer -u
 	pamixer -i 5 --allow-boost
-	send_notification
+	#send_notification
 case down
 	pamixer -u
 	pamixer -d 5 --allow-boost
-	send_notification
+	#send_notification
 case mute
 	pamixer -t
 	if eval (pamixer --get-mute)
-		dunstify -a "changevolume" -t 2000 -r 9993 -u low -i "volume-mute" "Volume" "Currently muted"
+		#dunstify -a "changevolume" -t 2000 -r 9993 -u low -i "volume-mute" "Volume" "Currently muted"
 	else
-		send_notification up
+		#send_notification up
   end
 end
