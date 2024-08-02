@@ -1,0 +1,3 @@
+#!/bin/fish
+
+XDG_CURRENT_DESKTOP=sway flameshot gui
