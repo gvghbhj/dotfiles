@@ -1,0 +1,36 @@
+#!/usr/bin/python
+
+# Simple script that simply fetches the current temperature of the location specified in the first argument to the script in degrees Celsius, see docs at https://www.weatherapi.com/docs/
+
+import requests
+import sys
+import os
+from requests.models import HTTPError
+from colorama import Fore, Style
+
+def main():
+    if len(sys.argv) != 2:
+        print(Fore.RED + "Error: wrong number of arguments")
+        return 1
+
+    api_url = "http://api.weatherapi.com/v1/current.json" 
+    try:
+        weather_info = requests.get(
+            api_url,
+            params={
+                "key": os.environ.get("WEATHER_API_KEY"),
+                "q": sys.argv[1]
+            }
+        )
+        weather_info.raise_for_status()
+    except HTTPError as http_err:
+        print(f"HTTP error occurred: {http_err}")
+    except Exception as err:
+        print(f"Other error occurred: {err}")
+    else:
+        weather_info = weather_info.json()
+        print(f"The current temprature is: {Fore.BLUE + Style.BRIGHT +  str(weather_info["current"]["temp_c"])} ℃")
+
+
+if __name__ == "__main__":
+    main()
