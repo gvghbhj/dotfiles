@@ -14,15 +14,15 @@ from kitty.tab_bar import (
 )
 
 opts = get_options()
-icon_fg = as_rgb(color_as_int(opts.color16))
-icon_bg = as_rgb(color_as_int(opts.color8))
+icon_fg = as_rgb(color_as_int(opts.color15))
+icon_bg = as_rgb(color_as_int(opts.color4))
 bat_text_color = as_rgb(color_as_int(opts.color15))
 clock_color = as_rgb(color_as_int(opts.color15))
 date_color = as_rgb(color_as_int(opts.color8))
-SEPARATOR_SYMBOL, SOFT_SEPARATOR_SYMBOL = ("", "")
+SEPARATOR_SYMBOL, SOFT_SEPARATOR_SYMBOL = ("", "")
 RIGHT_MARGIN = 1
 REFRESH_TIME = 1
-ICON = "  "
+ICON = "   "
 UNPLUGGED_ICONS = {
     10: "",
     20: "",
@@ -39,15 +39,17 @@ PLUGGED_ICONS = {
     1: "",
 }
 UNPLUGGED_COLORS = {
-    15: as_rgb(color_as_int(opts.color1)),
-    16: as_rgb(color_as_int(opts.color15)),
+    15: as_rgb(color_as_int(opts.color9)),
+    16: as_rgb(color_as_int(opts.color2)),
 }
 PLUGGED_COLORS = {
-    15: as_rgb(color_as_int(opts.color1)),
-    16: as_rgb(color_as_int(opts.color6)),
-    99: as_rgb(color_as_int(opts.color6)),
-    100: as_rgb(color_as_int(opts.color2)),
+    15: as_rgb(color_as_int(opts.color2)),
+    16: as_rgb(color_as_int(opts.color2)),
+    99: as_rgb(color_as_int(opts.color9)),
+    100: as_rgb(color_as_int(opts.color9)),
 }
+CELLS_SEP = ' ⋮'
+CELLS_SEP_COLOR = as_rgb(color_as_int(opts.color4))
 
 
 def _draw_icon(screen: Screen, index: int) -> int:
@@ -57,8 +59,11 @@ def _draw_icon(screen: Screen, index: int) -> int:
     screen.cursor.fg = icon_fg
     screen.cursor.bg = icon_bg
     screen.draw(ICON)
+    screen.cursor.bg = as_rgb(color_as_int(opts.color0))
+    screen.cursor.fg = icon_fg
+    screen.draw('⋮')
     screen.cursor.fg, screen.cursor.bg = fg, bg
-    screen.cursor.x = len(ICON)
+    screen.cursor.x = len(ICON) + 1
     return screen.cursor.x
 
 
@@ -83,8 +88,8 @@ def _draw_left_status(
     else:
         next_tab_bg = default_bg
         needs_soft_separator = False
-    if screen.cursor.x <= len(ICON):
-        screen.cursor.x = len(ICON)
+    # if screen.cursor.x <= len(ICON):
+    #     screen.cursor.x = len(ICON)
     screen.draw(" ")
     screen.cursor.bg = tab_bg
     draw_title(draw_data, screen, tab, index)
@@ -181,14 +186,16 @@ def draw_tab(
         timer_id = add_timer(_redraw_tab_bar, REFRESH_TIME, True)
     clock = datetime.now().strftime(" %H:%M")
     date = datetime.now().strftime(" %d.%m.%Y")
+
     cells = get_battery_cells()
+    cells.append((CELLS_SEP_COLOR, CELLS_SEP))
     cells.append((clock_color, clock))
-    cells.append((date_color, date))
+    cells.append((CELLS_SEP_COLOR, CELLS_SEP))
     right_status_length = RIGHT_MARGIN
     for cell in cells:
         right_status_length += len(str(cell[1]))
 
-    _draw_icon(screen, index)
+    # _draw_icon(screen, index)
     _draw_left_status(
         draw_data,
         screen,
