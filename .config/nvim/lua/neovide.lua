@@ -2,7 +2,7 @@
 
 -- Options:
 
-vim.o.guifont = 'IosevkaTerm NF:h14:#e-subpixelantialias'
+vim.o.guifont = 'IosevkaTerm NF:h15:#e-subpixelantialias'
 vim.g.neovide_fullscreen = false
 vim.g.neovide_remember_window_size = false
 

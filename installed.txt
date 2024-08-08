@@ -23,7 +23,6 @@ cmus
 colord
 dart-sass
 duf
-dunst
 efibootmgr
 evtest
 eza
@@ -40,6 +39,7 @@ gnome-desktop
 gnome-tweaks
 go
 gping
+gum
 hypridle
 hyprland
 hyprlock
@@ -68,11 +68,13 @@ pamixer
 papirus-icon-theme
 paru
 pass-otp
+playerctl
 pm-utils
 python-dbus-next
 python-numpy
 python-psutil
 python-pywal
+python-textual
 qalculate-gtk
 qt5ct
 qt6ct
@@ -92,7 +94,6 @@ udiskie
 ufw
 unzip
 valgrind
-waybar
 webkit2gtk
 wget
 xorg-server
