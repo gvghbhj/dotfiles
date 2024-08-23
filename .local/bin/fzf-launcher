@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-kitty --class floating bash -c "fzf $* < /proc/$$/fd/0 > /proc/$$/fd/1"
+kitty --class floating -o tab_bar_min_tabs=2 bash -c "fzf $* < /proc/$$/fd/0 > /proc/$$/fd/1"
