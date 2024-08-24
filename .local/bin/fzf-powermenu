@@ -2,15 +2,15 @@
 
 set uptime (upt)
 
-set items (echo -e "Uptime -> $uptime\n\n  Shutdown\n\n  Reboot\n\n  Logout\n\n  Lock\n\n󰜺  Cancel" | fzf-launcher --header-lines=2 --reverse --preview="")
+set items (echo -e "Uptime -> $uptime\n\n⏾ Shutdown\n\n↺ Reboot\n\n󰍃 Logout\n\n󰤆 Lock\n\n󰜺  Cancel" | fzf-launcher --header-lines=2 --reverse --preview="")
 
 switch $items
-case '  Shutdown'
+case '⏾ Shutdown'
   systemctl poweroff
-case '  Reboot'
+case '↺ Reboot'
   systemctl reboot
-case '  Logout'
+case '󰍃 Logout'
   hyprctl dispatch exit
-case '  Lock'
+case '󰤆 Lock'
   hyprlock
 end
