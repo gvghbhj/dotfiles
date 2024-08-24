@@ -38,6 +38,12 @@ if status is-interactive
     abbr --add pull git pull origin 
     abbr --add cm git commit -a -m
     abbr --add st git status --short -uno
+
+    # asusctl:
+    
+    abbr --add asq asusctl profile -P Quiet
+    abbr --add asb asusctl profile -P Balanced
+    abbr --add asp asusctl profile -P Performance
     
 
 
