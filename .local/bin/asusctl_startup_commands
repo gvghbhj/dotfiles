@@ -1,0 +1,7 @@
+#!/bin/bash
+
+asusctl -c 95
+
+asusctl profile -P Performance
+
+set POWER_PROFILE Performance

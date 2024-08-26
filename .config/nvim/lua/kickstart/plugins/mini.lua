@@ -239,7 +239,7 @@ return {
         { desc = '[f]ind [n]eovim files' }
       )
       vim.keymap.set('n', 'z=', '<cmd>lua MiniExtra.pickers.spellsuggest()<CR>', { desc = 'spellsuggestions' })
-      vim.keymap.set('n', '<Tab>', '<cmd>lua MiniPick.builtin.buffers({include_current = false})<CR>', { desc = 'find buffers' })
+      -- vim.keymap.set('n', '<Tab>', '<cmd>lua MiniPick.builtin.buffers({include_current = false})<CR>', { desc = 'find buffers' })
       vim.keymap.set('n', '<leader>fb', MiniExtra.pickers.explorer, { desc = 'opens the mini.pick file[b]rowser' })
 
       local hipatterns = require 'mini.hipatterns'
