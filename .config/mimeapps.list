@@ -64,8 +64,8 @@ video/x-ogm=mpv.desktop;
 video/x-ogm+ogg=mpv.desktop;
 video/x-theora=mpv.desktop;
 video/x-theora+ogg=mpv.desktop;
-x-scheme-handler/http=firefox.desktop;
-x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/http=brave-browser.desktop;firefox.desktop;
+x-scheme-handler/https=brave-browser.desktop;firefox.desktop;
 
 [Default Applications]
 application/json=neovide.desktop;
@@ -145,7 +145,7 @@ video/x-theora=mpv.desktop;
 video/x-theora+ogg=mpv.desktop;
 x-scheme-handler/about=brave-browser.desktop
 x-scheme-handler/chrome=floorp.desktop
-x-scheme-handler/http=floorp.desktop
-x-scheme-handler/https=floorp.desktop
+x-scheme-handler/http=brave-browser.desktop;
+x-scheme-handler/https=brave-browser.desktop;
 x-scheme-handler/obsidian=obsidian.desktop
 x-scheme-handler/unknown=brave-browser.desktop

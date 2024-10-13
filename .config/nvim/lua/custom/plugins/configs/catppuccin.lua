@@ -18,12 +18,12 @@ return {
       types = {},
     },
     color_overrides = {
-      mocha = {
-        base = '#11111b',
-        mantle = '#11111b',
-        crust = '#11111b',
-        blue = '#789beb',
-      },
+      -- mocha = {
+      --   base = '#1e1e2e',
+      --   mantle = '#1e1e2e',
+      --   crust = '#1e1e2e',
+      --   blue = '#789beb',
+      -- },
     },
     integrations = {
       telescope = {
@@ -42,16 +42,16 @@ return {
     },
     custom_highlights = function(colors)
       return {
-        TabLineSel = { bg = colors.blue },
-        WinSeparator = { fg = colors.blue },
-        TelescopePromptPrefix = { fg = colors.blue },
-        TelescopeSelectionCaret = { fg = colors.blue },
-        BufferCurrent = { bg = colors.base },
-        BufferCurrentIndex = { bg = colors.base },
-        BufferCurrentMod = { bg = colors.base },
-        BufferCurrentSign = { bg = colors.base },
-        MiniStarterQuery = { fg = colors.lavender },
-        MiniIndentscopeSymbolOff = { fg = colors.surface0 },
+        -- TabLineSel = { bg = colors.blue },
+        -- WinSeparator = { fg = colors.blue },
+        -- TelescopePromptPrefix = { fg = colors.blue },
+        -- TelescopeSelectionCaret = { fg = colors.blue },
+        -- BufferCurrent = { bg = colors.base },
+        -- BufferCurrentIndex = { bg = colors.base },
+        -- BufferCurrentMod = { bg = colors.base },
+        -- BufferCurrentSign = { bg = colors.base },
+        -- MiniStarterQuery = { fg = colors.lavender },
+        -- MiniIndentscopeSymbolOff = { fg = colors.surface0 },
       }
     end,
   },

@@ -10,7 +10,7 @@ success_symbol = '[ 𝝺](bold blue)' # The 'success_symbol' segment is being se
 error_symbol = '[ 𝝺](bold red)'
 
 [directory]
-format = '[ $path]($style)[$read_only]($read_only_style) '
+format = '[ $path](bold blue)($style)[$read_only]($read_only_style) '
 read_only = '  '
 # Disable the package module, hiding it from the prompt completely
 
