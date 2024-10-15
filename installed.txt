@@ -1,8 +1,9 @@
+acpid
 amd-ucode
 asusctl
+auto-cpufreq
 aylurs-gtk-shell
 base
-base-devel
 bat
 bluez-hid2hci
 bluez-utils
@@ -18,13 +19,14 @@ chaotic-mirrorlist
 cliphist
 cmus
 dart-sass
+dolphin
 duf
 efibootmgr
+elisa
 eza
 fastfetch
 fd
 fisher
-flameshot
 flatpak-kcm
 floorp
 ghc
@@ -34,7 +36,9 @@ gnome-boxes
 gnome-tweaks
 go
 gping
+gtop
 gum
+gwenview
 hypridle
 hyprland
 hyprlock
@@ -61,10 +65,11 @@ mullvad-vpn-cli
 neovide
 net-tools
 nvtop
+obsidian
 oxygen
 oxygen-sounds
 pamixer
-papirus-icon-theme
+papirus-folders
 pass-otp
 plasma-browser-integration
 plasma-desktop
@@ -78,9 +83,10 @@ plasma-wayland-protocols
 plasma-welcome
 playerctl
 plymouth-kcm
+powertop
 print-manager
+python-numpy
 python-pywal
-python-requests
 qalculate-gtk
 radeontop
 ranger
@@ -88,6 +94,8 @@ ripgrep
 rustup
 sassc
 sddm-kcm
+snapshot
+spectacle
 starship
 steam
 swww
@@ -101,6 +109,5 @@ wacomtablet
 wget
 wlr-randr
 xf86-video-amdgpu
-zathura
 zellij
 zoxide
