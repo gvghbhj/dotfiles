@@ -1,6 +1,6 @@
 #!/bin/bash
 
-asusctl -c 95
+asusctl -c 80
 
 asusctl profile -P Performance
 

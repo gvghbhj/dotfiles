@@ -170,7 +170,7 @@ return {
         },
         window = {
           config = win_config,
-          prompt_prefix = ' 󰘧 ',
+          prompt_prefix = '𝝺 ',
         },
         options = {
           content_from_bottom = true,
