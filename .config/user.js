@@ -281,6 +281,7 @@ user_pref("browser.cache.memory", 256000);
 user_pref("media.ffvpx.enabled", false);
 user_pref("media.rdd-vpx.enabled", false);
 user_pref("media.navigator.mediadatadecoder_vpx_enabled", true);
+user_pref("browser.tabs.unloadOnLowMemory", true);
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
  ****************************************************************************/
