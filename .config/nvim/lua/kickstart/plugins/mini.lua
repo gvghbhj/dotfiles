@@ -255,38 +255,38 @@ return {
           hex_color = hipatterns.gen_highlighter.hex_color(),
         },
       }
-      -- require('mini.statusline').setup {
-      --   content = {
-      --     active = function()
-      --       local mode, mode_hl = MiniStatusline.section_mode { trunc_width = 1000 }
-      --       local git = MiniStatusline.section_git { trunc_width = 40 }
-      --       local diff = MiniStatusline.section_diff { trunc_width = 75, icon = '' }
-      --       local diagnostics = MiniStatusline.section_diagnostics {
-      --         trunc_width = 75,
-      --         signs = { ERROR = '󰅚 ', WARN = '󰀪 ', HINT = '󰌶 ', INFO = ' ' },
-      --         icon = ' ',
-      --       }
-      --       local filename = MiniStatusline.section_filename { trunc_width = 140 }
-      --       local fileinfo = MiniStatusline.section_fileinfo { trunc_width = 1000 }
-      --       local location = MiniStatusline.section_location { trunc_width = 1000 }
-      --       local search = MiniStatusline.section_searchcount { trunc_width = 75 }
-      --
-      --       if fileinfo == ' ministarter' then
-      --         filename = 'Neovim, the greatest text editor in the world'
-      --       end
-      --
-      --       return MiniStatusline.combine_groups {
-      --         { hl = mode_hl, strings = { mode } },
-      --         { hl = 'MiniStatuslineDevinfo', strings = { git, diff, diagnostics } },
-      --         '%<', -- Mark general truncate point
-      --         { hl = 'MiniStatuslineFilename', strings = { filename } },
-      --         '%=', -- End left alignment
-      --         { hl = 'MiniStatuslineFilename', strings = { fileinfo } },
-      --         { hl = mode_hl, strings = { search, location } },
-      --       }
-      --     end,
-      --   },
-      -- }
+      require('mini.statusline').setup {
+        content = {
+          active = function()
+            local mode, mode_hl = MiniStatusline.section_mode { trunc_width = 1000 }
+            local git = MiniStatusline.section_git { trunc_width = 40 }
+            local diff = MiniStatusline.section_diff { trunc_width = 75, icon = '' }
+            local diagnostics = MiniStatusline.section_diagnostics {
+              trunc_width = 75,
+              signs = { ERROR = '󰅚 ', WARN = '󰀪 ', HINT = '󰌶 ', INFO = ' ' },
+              icon = ' ',
+            }
+            local filename = MiniStatusline.section_filename { trunc_width = 140 }
+            local fileinfo = MiniStatusline.section_fileinfo { trunc_width = 1000 }
+            local location = MiniStatusline.section_location { trunc_width = 1000 }
+            local search = MiniStatusline.section_searchcount { trunc_width = 75 }
+
+            if fileinfo == ' ministarter' then
+              filename = 'Neovim, the greatest text editor in the world'
+            end
+
+            return MiniStatusline.combine_groups {
+              { hl = mode_hl, strings = { mode } },
+              { hl = 'MiniStatuslineDevinfo', strings = { git, diff, diagnostics } },
+              '%<', -- Mark general truncate point
+              { hl = 'MiniStatuslineFilename', strings = { filename } },
+              '%=', -- End left alignment
+              { hl = 'MiniStatuslineFilename', strings = { fileinfo } },
+              { hl = mode_hl, strings = { search, location } },
+            }
+          end,
+        },
+      }
       vim.opt.laststatus = 3
     end,
   },
