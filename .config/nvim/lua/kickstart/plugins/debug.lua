@@ -9,6 +9,7 @@
 return {
   -- NOTE: Yes, you can install new plugins here!
   'mfussenegger/nvim-dap',
+  event = { 'BufReadPost', 'BufAdd', 'BufNewFile' },
   -- NOTE: And you can specify dependencies as well
   dependencies = {
     -- Creates a beautiful debugger UI
@@ -23,6 +24,7 @@ return {
 
     -- Add your own debuggers here
     'leoluz/nvim-dap-go',
+    'mfussenegger/nvim-dap-python'
   },
   config = function()
     local dap = require 'dap'
@@ -86,5 +88,6 @@ return {
 
     -- Install golang specific config
     require('dap-go').setup()
+    require("dap-python").setup("python3")
   end,
 }
