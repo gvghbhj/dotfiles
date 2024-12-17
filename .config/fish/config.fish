@@ -25,13 +25,6 @@ if status is-interactive
     abbr --add md mullvad disconnect
     abbr --add mr mullvad relay
 
-    # PACMAN:
-    
-    abbr --add pas sudo pacman -S
-    abbr --add par sudo pacman -Rcs
-    abbr --add pac sudo pacman 
-    abbr --add pasu sudo pacman -Syu
-
     # GIT:
     
     abbr --add push git push origin
